@@ -1,0 +1,128 @@
+.promo {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.promo__image-container {
+  flex: 1.5;
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.promo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.promo__overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.promo__overlay-box {
+  background-color: #ffc72c;
+  color: #27251f;
+  padding: 10px 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.promo__content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.promo__title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.promo__description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.promo__button {
+  background-color: #ffc72c;
+  color: #27251f;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo__button:hover {
+  background-color: #e6b327;
+}
+
+@media (max-width: 992px) {
+  .promo {
+    flex-direction: column;
+  }
+  
+  .promo__image-container,
+  .promo__content {
+    flex: none;
+    width: 100%;
+  }
+  
+  .promo__image-container {
+    max-height: 300px;
+  }
+  
+  .promo__overlay {
+    left: 5%;
+  }
+  
+  .promo__overlay-box {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+  
+  .promo__content {
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .promo__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo__overlay-box {
+    font-size: 1.2rem;
+  }
+  
+  .promo__content {
+    padding: 20px;
+  }
+} 

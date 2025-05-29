@@ -6,6 +6,7 @@ export const Navigation = () => {
     <nav className="header__nav">
       <ul className="header__nav-list">
         <li className="header__nav-item"><Link className="header__nav-link" to="/menu">Меню</Link></li>
+        <li className="header__nav-item"><Link className="header__nav-link" to="/custom-burger">Власний бургер</Link></li>
         <li className="header__nav-item"><Link className="header__nav-link" to="/jobs">Робота</Link></li>
         <li className="header__nav-item"><Link className="header__nav-link" to="/impact-strategy">Стратегія впливу</Link></li>
         <li className="header__nav-item"><Link className="header__nav-link" to="/hygiene-and-quality">Якість та гігієна</Link></li>

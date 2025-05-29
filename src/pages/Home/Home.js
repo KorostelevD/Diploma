@@ -4,7 +4,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Home.css";
 import { InfoCard } from "../../components/InfoCard/InfoCard";
 import { PromoSection } from "../../components/PromoSection/PromoSection";
-import { HeroSlide } from "../../components/HeroSlide/HeroSlide";
 
 const cardData = [
   {
@@ -91,35 +90,74 @@ export const Home = () => {
     setCurrentSlide(index);
   };
 
+  const currentSlideData = carouselData[currentSlide];
+
   return (
     <div className="home">
       <section className="home__hero-carousel">
-        <Carousel
-          showArrows={false}
-          autoPlay={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={false}
-          onChange={handleSlideChange}
-          selectedItem={currentSlide}
-          ref={carouselRef}
-        >
-          {carouselData.map((slide, index) => (
-            <HeroSlide
-              key={index}
-              title={slide.title}
-              description={slide.description}
-              buttonText={slide.buttonText}
-              imageSrc={slide.imageSrc}
-              currentSlide={currentSlide}
-              totalSlides={carouselData.length}
-              onDotClick={handleDotClick}
-              onPrevClick={handlePrevClick}
-              onNextClick={handleNextClick}
-            />
-          ))}
-        </Carousel>
+        <div className="hero-carousel-wrapper">
+          <Carousel
+            showArrows={false}
+            autoPlay={true}
+            infiniteLoop={true}
+            showThumbs={false}
+            showStatus={false}
+            showIndicators={false}
+            onChange={handleSlideChange}
+            selectedItem={currentSlide}
+            ref={carouselRef}
+            className="background-carousel"
+          >
+            {carouselData.map((slide, index) => (
+              <div
+                key={index}
+                className="carousel-background-slide"
+                style={{ backgroundImage: `url(${slide.imageSrc})` }}
+              />
+            ))}
+          </Carousel>
+          <div className="hero-static-card">
+            <div className="hero-card-content">
+              <h2 className="hero-card-title">{currentSlideData.title}</h2>
+              <p className="hero-card-description">
+                {currentSlideData.description}
+              </p>
+              <button className="hero-card-button">
+                {currentSlideData.buttonText}
+              </button>
+
+              <div className="hero-card-controls">
+                <button
+                  className="hero-arrow hero-arrow--prev"
+                  onClick={handlePrevClick}
+                  aria-label="Previous slide"
+                >
+                  <span>&#8249;</span>
+                </button>
+
+                <div className="hero-dots">
+                  {carouselData.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`hero-dot ${
+                        index === currentSlide ? "hero-dot--active" : ""
+                      }`}
+                      onClick={() => handleDotClick(index)}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  className="hero-arrow hero-arrow--next"
+                  onClick={handleNextClick}
+                  aria-label="Next slide"
+                >
+                  <span>&#8250;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <PromoSection
@@ -144,4 +182,4 @@ export const Home = () => {
       </section>
     </div>
   );
-}
+};

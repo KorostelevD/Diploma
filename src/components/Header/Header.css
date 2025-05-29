@@ -6,7 +6,55 @@
   z-index: 1000;
 }
 
-.header__container {
+.header__right-container {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.header__top-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.header__top-link:hover {
+  background-color: rgba(255, 188, 13, 0.1);
+  color: #ffbc0d;
+}
+
+.header__top-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.header__top-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__main {
+  background-color: #fff;
+}
+
+.header__main-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,32 +117,36 @@
   width: 100%;
 }
 
-.header__right {
-  display: flex;
-  align-items: center;
+.header__top--mobile {
+  padding: 6px 0;
 }
 
-.header__search-button,
-.header__find-us-button {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  cursor: pointer;
+.header__top-container--mobile {
+  padding: 0 15px;
+  gap: 15px;
 }
 
-.header__search-icon,
-.header__location-icon {
-  margin-right: 5px;
-  font-size: 18px;
+.header__top-link--mobile {
+  padding: 4px 8px;
+  font-size: 13px;
 }
 
-.header__right-link {
-  color: #333;
-  text-decoration: none;
+.header__top-icon--mobile {
+  width: 14px;
+  height: 14px;
 }
 
-.header__right-link:hover {
-  color: #ffbc0d;
+.header__main-container--mobile {
+  padding: 0 15px;
+  gap: 20px;
+}
+
+.header__nav--mobile {
+  display: none;
+}
+
+.header__logo--mobile {
+  height: 80px;
 }
 
 @media (max-width: 1024px) {
@@ -105,6 +157,15 @@
   .header__nav-link {
     font-size: 15px;
   }
+  
+  .header__top-container {
+    padding: 0 15px;
+  }
+  
+  .header__main-container {
+    padding: 0 15px;
+    gap: 30px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -112,18 +173,40 @@
     display: none;
   }
   
-  .header__container {
-    justify-content: space-between;
+  .header__main-container {
+    justify-content: center;
+  }
+  
+  .header__logo {
+    height: 90px;
   }
 }
 
 @media (max-width: 600px) {
-  .header__button-text {
-    display: none;
+  .header__top {
+    padding: 6px 0;
   }
   
-  .header__search-button,
-  .header__find-us-button {
-    margin-left: 10px;
+  .header__top-container {
+    padding: 0 10px;
+    gap: 10px;
+  }
+  
+  .header__top-link {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+  
+  .header__top-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .header__main-container {
+    padding: 0 10px;
+  }
+  
+  .header__logo {
+    height: 80px;
   }
 } 

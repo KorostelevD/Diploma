@@ -16,7 +16,6 @@ export const PromoSection = ({
       <div className="promo__content">
         <h2 className="promo__title">{title}</h2>
         <p className="promo__description">{description}</p>
-        <button className="promo__button">{buttonText}</button>
       </div>
     </section>
   );

@@ -5,13 +5,12 @@ import { Footer } from "./components/Footer/Footer";
 import { Home } from "./pages/Home/Home";
 import { Menu } from "./pages/Menu/Menu";
 import { Jobs } from "./pages/Jobs/Jobs";
-import { ImpactStrategy } from "./pages/ImpactStrategy/ImpactStrategy";
 import { HygieneAndQuality } from "./pages/HygieneAndQuality/HygieneAndQuality";
-import { Delivery } from "./pages/Delivery/Delivery";
 import "./App.css";
 import { Search } from "./pages/Search/Search";
 import { CustomBurger } from "./pages/CustomBurger/CustomBurger";
 import { Cart } from "./pages/Cart/Cart";
+import { GoalsImpact } from "./components/GoalsImpact/GoalsImpact";
 
 function App() {
   return (
@@ -23,10 +22,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/custom-burger" element={<CustomBurger />} />
-            <Route path="/jobs" element={<Jobs />} />
-            <Route path="/impact-strategy" element={<ImpactStrategy />} />
+            <Route path="/impact-strategy" element={<GoalsImpact />} /> 
             <Route path="/hygiene-and-quality" element={<HygieneAndQuality />} />
-            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/jobs" element={<Jobs />} />
             <Route path="/search" element={<Search />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>

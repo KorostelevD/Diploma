@@ -1,0 +1,107 @@
+.goals-impact {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.goals-impact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.goals-impact__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin: 0 0 50px 0;
+  letter-spacing: 1px;
+}
+
+.goals-impact__image-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.goals-impact__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.goals-impact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.goals-impact__mission p {
+  margin-bottom: 20px;
+}
+
+.goals-impact__impact p {
+  margin-bottom: 15px;
+}
+
+.goals-impact__impact strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.goals-impact__impact ul {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.goals-impact__impact li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.goals-impact__impact li:before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .goals-impact {
+    padding: 60px 20px;
+  }
+  
+  .goals-impact__title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .goals-impact__image-container {
+    margin-bottom: 30px;
+  }
+  
+  .goals-impact__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .goals-impact {
+    padding: 40px 15px;
+  }
+  
+  .goals-impact__title {
+    font-size: 1.8rem;
+  }
+  
+  .goals-impact__content {
+    gap: 25px;
+  }
+} 

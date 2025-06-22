@@ -1,0 +1,101 @@
+.about-us {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+}
+
+.about-us__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin: 0 0 60px 0;
+  letter-spacing: 1px;
+}
+
+.about-us__content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-us__text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-us__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #333;
+}
+
+.about-us__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-us__list li:before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.about-us__images {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us__image {
+  width: 233px;
+  height: 233px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 60px 20px;
+  }
+  
+  .about-us__title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .about-us__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-us__text {
+    max-width: 100%;
+  }
+  
+  .about-us__list {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .about-us__images {
+    gap: 15px;
+  }
+  
+  .about-us__image {
+    width: 120px;
+    height: 160px;
+  }
+} 

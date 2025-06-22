@@ -1,6 +1,6 @@
 .promo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -10,6 +10,7 @@
   flex: 1.5;
   position: relative;
   max-height: 400px;
+  max-width: 489px;
   overflow: hidden;
 }
 

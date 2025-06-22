@@ -4,63 +4,35 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Home.css";
 import { InfoCard } from "../../components/InfoCard/InfoCard";
 import { PromoSection } from "../../components/PromoSection/PromoSection";
+import { AboutUs } from "../../components/AboutUs/AboutUs";
+import { GoalsImpact } from "../../components/GoalsImpact/GoalsImpact";
+import slide1 from "../../assets/slider/slide1.jpg";
+import slide2 from "../../assets/slider/slide2.jpg";
+import promoImage from "../../assets/images/promoImage.jpg";
 
 const cardData = [
   {
-    imageSrc:
-      "https://s7d1.scene7.com/is/image/mcdonalds/mcdrive_2336x1040:3-column-desktop?resmode=sharp2",
-    altText: "Працюй з нами",
-    title: "Працюй з нами",
-    description:
-      "У нас ти зможеш поєднувати навчання й роботу, зустрічатися з друзями та мати вдосталь часу для родини!",
-    buttonText: "Детальніше",
+    title: "Нова колекція: URBAN CODE.",
+    description: "Мода, яка говорить. Дизайн, який провокує.",
+    buttonText: "Дивитися колекцію",
   },
   {
-    imageSrc:
-      "https://s7d1.scene7.com/is/image/mcdonalds/Public_BigMAv_Phone-1:3-column-desktop?resmode=sharp2",
-    altText: "Доставляємо улюблене",
-    title: "Доставляємо улюблене",
+    title: `Проєкт "City Talks" уже в мережі.`,
     description:
-      'Вам більше не доведеться виходити з дому, щоб насолоджуватися вашими улюбленими стравами. Отримайте їх разом з нашим безконтактним "МакДелівері".',
-    buttonText: "Детальніше",
-  },
-  {
-    imageSrc:
-      "https://s7d1.scene7.com/is/image/mcdonalds/mom_kid_2336x1040:3-column-desktop?resmode=sharp2",
-    altText: "Фундація Дім Рональда МакДональда в Україні",
-    title: "Фундація Дім Рональда МакДональда в Україні®",
-    description:
-      '"Фундація" працює в Україні з 2016 року й утілює програми, що покращують здоров\'я дітей.',
-    buttonText: "Детальніше",
+      "Дізнайся, як виглядає місто, коли воно говорить твоїм стилем.",
+    buttonText: "Подивитися відео",
   },
 ];
 
-const trendingProductData = {
-  imageSrc:
-    "https://s7d1.scene7.com/is/image/mcdonalds/McCafe_publication_2:1-column-desktop?resmode=sharp2",
-  altText: "Смачна кава",
-  title: "Справді смачна кава!",
-  description:
-    'Якщо й існує справді смачна кава, то в "МакДональдз". Заходь і смакуй улюблену 100% арабіку в жовтому стаканчику. Залишиться лише вибрати: велика чи маленька.',
-  buttonText: "Детальніше",
-};
-
+// Add carouselData for the two slides
 const carouselData = [
   {
-    title: "Біг Тейсті® — то любов",
-    description:
-      "І цю любов помножено на три! Твій той самий улюблений Біг Тейсті® тепер у трьох форматах: Сингл, Джуніор і Дабл. Ти вже обрав Біг Тейсті® — тепер розмір обери.",
-    buttonText: "Детальніше",
-    imageSrc:
-      "https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/landings/big-tasty/1-Slider_BigTasty.png",
+    imageSrc: slide1,
+    altText: "Double Patty Haisenburger 50%",
   },
   {
-    title: "НайсПрайс? Наааайс!",
-    description:
-      "Твої улюблені Чізбургер або нагетси з маленьким напоєм чи Картоплею Фрі за суперціною. НайсПрайс Комбо в МакДональдз. Завжди отримуєш більше!",
-    buttonText: "Детальніше",
-    imageSrc:
-      "https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/slider/slider_Value_Mcd.png",
+    imageSrc: slide2,
+    altText: "Second Slide",
   },
 ];
 
@@ -90,96 +62,107 @@ export const Home = () => {
     setCurrentSlide(index);
   };
 
-  const currentSlideData = carouselData[currentSlide];
-
   return (
     <div className="home">
-      <section className="home__hero-carousel">
-        <div className="hero-carousel-wrapper">
-          <Carousel
-            showArrows={false}
-            autoPlay={true}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={false}
-            onChange={handleSlideChange}
-            selectedItem={currentSlide}
-            ref={carouselRef}
-            className="background-carousel"
+      <div className="hero-carousel-wrapper" style={{ position: "relative" }}>
+        <Carousel
+          showArrows={false}
+          autoPlay={true}
+          infiniteLoop={true}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          onChange={handleSlideChange}
+          selectedItem={currentSlide}
+          ref={carouselRef}
+          className="background-carousel"
+        >
+          {carouselData.map((slide, index) => (
+            <div
+              key={index}
+              className="carousel-background-slide"
+              style={{ backgroundImage: `url(${slide.imageSrc})` }}
+              aria-label={slide.altText}
+            />
+          ))}
+        </Carousel>
+        {/* Navigation positioned absolutely at bottom center */}
+        <div
+          className="hero-navigation"
+          style={{
+            position: "absolute",
+            zIndex: 3,
+            bottom: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
+            alignItems: "center",
+            gap: "15px",
+          }}
+        >
+          <button
+            className="hero-arrow"
+            onClick={handlePrevClick}
+            aria-label="Previous slide"
           >
-            {carouselData.map((slide, index) => (
-              <div
-                key={index}
-                className="carousel-background-slide"
-                style={{ backgroundImage: `url(${slide.imageSrc})` }}
+            &#8592;
+          </button>
+          <div className="hero-dots" style={{ display: "flex", gap: "8px" }}>
+            {carouselData.map((_, idx) => (
+              <span
+                key={idx}
+                className={`hero-dot${
+                  currentSlide === idx ? " hero-dot--active" : ""
+                }`}
+                onClick={() => handleDotClick(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  backgroundColor: currentSlide === idx ? "#333" : "#ccc",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
+                }}
               />
             ))}
-          </Carousel>
-          <div className="hero-static-card">
-            <div className="hero-card-content">
-              <h2 className="hero-card-title">{currentSlideData.title}</h2>
-              <p className="hero-card-description">
-                {currentSlideData.description}
-              </p>
-              <button className="hero-card-button">
-                {currentSlideData.buttonText}
-              </button>
-
-              <div className="hero-card-controls">
-                <button
-                  className="hero-arrow hero-arrow--prev"
-                  onClick={handlePrevClick}
-                  aria-label="Previous slide"
-                >
-                  <span>&#8249;</span>
-                </button>
-
-                <div className="hero-dots">
-                  {carouselData.map((_, index) => (
-                    <span
-                      key={index}
-                      className={`hero-dot ${
-                        index === currentSlide ? "hero-dot--active" : ""
-                      }`}
-                      onClick={() => handleDotClick(index)}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  className="hero-arrow hero-arrow--next"
-                  onClick={handleNextClick}
-                  aria-label="Next slide"
-                >
-                  <span>&#8250;</span>
-                </button>
-              </div>
-            </div>
           </div>
+          <button
+            className="hero-arrow"
+            onClick={handleNextClick}
+            aria-label="Next slide"
+          >
+            &#8594;
+          </button>
         </div>
-      </section>
+      </div>
 
       <PromoSection
-        imageSrc={trendingProductData.imageSrc}
-        altText={trendingProductData.altText}
-        title={trendingProductData.title}
-        description={trendingProductData.description}
-        buttonText={trendingProductData.buttonText}
+        imageSrc={promoImage}
+        altText={"Promo Image"}
+        title={"THE LAB — ДЕ НАРОДЖУЄТЬСЯ ІДЕЯ"}
+        description={
+          "Ми — не просто студія. Ми — експериментальний простір, де креатив стає реальністю. У THE LAB ми міксуємо дизайн, технології й культуру, щоб створювати продукти, які змінюють уявлення про сучасність."
+        }
       />
 
       <section className="home__info-sections">
-        {cardData.map((card, index) => (
-          <InfoCard
-            key={index}
-            imageSrc={card.imageSrc}
-            altText={card.altText}
-            title={card.title}
-            description={card.description}
-            buttonText={card.buttonText}
-          />
-        ))}
-      </section>
-    </div>
-  );
-};
+        <h2 className="home__info-title">НОВИНКИ ВІД THE LAB</h2>
+        <div className="home__info-cards">
+          {cardData.map((card, index) => (
+            <InfoCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              buttonText={card.buttonText}
+            />
+                      ))}
+          </div>
+        </section>
+
+        <AboutUs />
+        
+        <GoalsImpact />
+      </div>
+    );
+  };

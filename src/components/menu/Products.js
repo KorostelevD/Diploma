@@ -3,8 +3,7 @@ import "./Products.css";
 
 const Products = ({ products, categoryName }) => {
   const calculateDiscountedPrice = (price, discount) => {
-    const numericPrice = parseFloat(price.replace(/[^\d.]/g, ''));
-    const discountedPrice = numericPrice * (1 - discount / 100);
+    const discountedPrice = price * (1 - discount / 100);
     return `${Math.round(discountedPrice)} ₴`;
   };
 
@@ -22,16 +21,13 @@ const Products = ({ products, categoryName }) => {
             <div className="products__image">
               <img
                 className="products__image-img"
-                src={product.image}
+                src={product.imageUrl}
                 alt={product.name}
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/200x150/ffbc0d/ffffff?text=McDonald%27s';
-                }}
               />
               {product.isNew && (
                 <span className="products__badge products__badge--new">Новинка</span>
               )}
-              {product.discount && (
+              {product.discount > 0 && (
                 <span className="products__badge products__badge--discount">
                   -{product.discount}%
                 </span>
@@ -43,14 +39,14 @@ const Products = ({ products, categoryName }) => {
                 {product.discount ? (
                   <>
                     <span className="products__price products__price--old">
-                      {product.price}
+                      {product.price}₴
                     </span>
                     <span className="products__price products__price--new">
                       {calculateDiscountedPrice(product.price, product.discount)}
                     </span>
                   </>
                 ) : (
-                  <span className="products__price">{product.price}</span>
+                  <span className="products__price">{product.price}₴</span>
                 )}
               </div>
             </div>

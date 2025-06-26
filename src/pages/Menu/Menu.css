@@ -1,13 +1,21 @@
 .menu {
   min-height: 100vh;
   background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1;
+  margin: 0 auto;
 }
 
 .menu__container {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .menu__sidebar {
@@ -69,4 +77,57 @@
   .menu__title {
     font-size: 28px;
   }
+}
+
+.menu__loading,
+.menu__error,
+.menu__products-loading,
+.menu__products-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.menu__loading {
+  min-height: 60vh;
+}
+
+.menu__products-loading {
+  min-height: 200px;
+  padding: 60px 40px;
+}
+
+.menu__error-text {
+  font-size: 18px;
+  color: #d32f2f;
+  margin: 0 0 20px 0;
+}
+
+.menu__products-error-text {
+  font-size: 18px;
+  color: #d32f2f;
+  margin: 0 0 20px 0;
+}
+
+.menu__error-button {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu__error-button:hover {
+  background-color: #e55a2b;
+}
+
+.menu__products-error {
+  min-height: 100px;
 } 

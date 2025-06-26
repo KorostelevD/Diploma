@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { Navigation } from "./Navigation";
+import logo from "../../assets/images/logo.png";
 
 export const Header = () => {
   return (
@@ -11,7 +12,7 @@ export const Header = () => {
           <div className="header__logo-container">
             <Link to="/">
               <img
-                src="https://www.mcdonalds.com/content/dam/sites/ua/nfl/icons/Logo_on_white_desktop_Small.jpg"
+                src={logo}
                 alt="McDonald's Logo"
                 className="header__logo"
               />

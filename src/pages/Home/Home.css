@@ -295,3 +295,115 @@
     gap: 10px;
   }
 }
+
+.home__app-promotion {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  margin-top: 60px;
+}
+
+.app-promotion__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app-promotion__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.app-promotion__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 30px 0;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.app-promotion__description {
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.app-promotion__button {
+  background-color: #ffbc0d;
+  color: #27251f;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-transform: none;
+  box-shadow: 0 4px 15px rgba(255, 188, 13, 0.3);
+}
+
+.app-promotion__button:hover {
+  background-color: #e6b327;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 188, 13, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .app-promotion__title {
+    font-size: 2.5rem;
+  }
+  
+  .app-promotion__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__app-promotion {
+    padding: 60px 15px;
+    margin-top: 40px;
+  }
+  
+  .app-promotion__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .app-promotion__description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .app-promotion__button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__app-promotion {
+    padding: 40px 10px;
+    margin-top: 30px;
+  }
+  
+  .app-promotion__title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+  
+  .app-promotion__description {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .app-promotion__button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

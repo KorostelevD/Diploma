@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
+import { useNavigate } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Home.css";
 import { InfoCard } from "../../components/InfoCard/InfoCard";
 import { PromoSection } from "../../components/PromoSection/PromoSection";
 import { AboutUs } from "../../components/AboutUs/AboutUs";
-import { GoalsImpact } from "../../components/GoalsImpact/GoalsImpact";
 import slide1 from "../../assets/slider/slide1.jpg";
 import slide2 from "../../assets/slider/slide2.jpg";
 import promoImage from "../../assets/images/promoImage.jpg";
@@ -39,6 +39,7 @@ const carouselData = [
 export const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef(null);
+  const navigate = useNavigate();
 
   const handlePrevClick = () => {
     if (carouselRef.current) {
@@ -155,14 +156,37 @@ export const Home = () => {
               title={card.title}
               description={card.description}
               buttonText={card.buttonText}
+              onButtonClick={
+                index === 0 ? () => navigate('/urban-code') :
+                index === 1 ? () => navigate('/city-talks') :
+                undefined
+              }
             />
-                      ))}
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        <AboutUs />
-        
-        <GoalsImpact />
-      </div>
-    );
-  };
+      <AboutUs />
+
+      <section className="home__app-promotion">
+        <div className="app-promotion__container">
+          <div className="app-promotion__content">
+            <h2 className="app-promotion__title">
+              The LAB App — замовляй ще швидше!
+            </h2>
+            <p className="app-promotion__description">
+              Відкрий наш ресторан y своєму смартфоні: зручне меню, бонуси,
+              трекінг доставки та спеціальні пропозиції — лише в додатку
+            </p>
+            <button 
+              className="app-promotion__button"
+              onClick={() => navigate('/download-app')}
+            >
+              Спробуй зараз — це безкоштовно!
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};

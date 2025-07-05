@@ -30,6 +30,75 @@ export const Navigation = () => {
             Про роботу
           </Link>
         </li>
+
+        <li className="header__nav-item">
+          <Link to="/cart" className="header__top-link" aria-label="Кошик">
+            <span className="header__top-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="7"
+                  cy="22"
+                  r="2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <circle
+                  cx="17"
+                  cy="22"
+                  r="2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <path
+                  d="M2 4h2l3.6 13.2a1 1 0 0 0 .96.8H19a1 1 0 0 0 .98-.8l2-8A1 1 0 0 0 21 7H6.16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </Link>
+        </li>
+        <li className="header__nav-item">
+          <Link to="/profile" className="header__top-link" aria-label="Профіль">
+            <span className="header__top-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="8"
+                  r="4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <path
+                  d="M4 20c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

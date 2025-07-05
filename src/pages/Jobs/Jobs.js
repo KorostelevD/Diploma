@@ -3,6 +3,7 @@ import "./Jobs.css";
 import workImage1 from "../../assets/images/work-image-1.jpg";
 import workImage2 from "../../assets/images/work-image-2.jpg";
 import workImage3 from "../../assets/images/work-image-3.jpg";
+import { Link } from "react-router-dom";
 
 export const Jobs = () => {
   return (
@@ -65,8 +66,12 @@ export const Jobs = () => {
             <p>Разом створюймо смачну історію нашого ресторану!</p>
 
             <div className="jobs__buttons">
-              <button className="jobs__button">Робота в ресторані</button>
-              <button className="jobs__button">Робота в офісі</button>
+              <Link to="/work-in-restaurant" className="jobs__button">
+                Робота в ресторані
+              </Link>
+              <Link to="/work-in-office" className="jobs__button">
+                Робота в офісі
+              </Link>
             </div>
           </div>
         </div>

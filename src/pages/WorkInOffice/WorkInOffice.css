@@ -1,0 +1,433 @@
+.office-work {
+  background-color: #fff;
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+.office-work__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.office-work__hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.office-work__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 40px 0;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.office-work__hero-image {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.office-work__hero-placeholder {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+}
+
+.office-work__office-scene {
+  font-size: 80px;
+  opacity: 0.6;
+}
+
+.office-work__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 40px 0 20px 0;
+  line-height: 1.3;
+}
+
+.office-work__description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.office-work__content {
+  margin-bottom: 80px;
+}
+
+.office-work__content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.office-work__left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-work__right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.office-work__section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 30px 0;
+  line-height: 1.3;
+}
+
+.office-work__positions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-work__positions-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.office-work__bullet {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.office-work__position-text {
+  color: #333;
+}
+
+.office-work__illustration {
+  max-width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.office-work__illustration-placeholder {
+  font-size: 80px;
+  color: #1976d2;
+  opacity: 0.7;
+}
+
+.office-work__benefits-section {
+  margin-top: 60px;
+}
+
+.office-work__benefits-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.office-work__benefits-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-work__benefits-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.office-work__benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-work__benefits-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.office-work__check {
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.office-work__office-illustration {
+  max-width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.office-work__office-placeholder {
+  font-size: 80px;
+  color: #f57c00;
+  opacity: 0.7;
+}
+
+.office-work__bottom-section {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 50px;
+  margin-top: 60px;
+}
+
+.office-work__team-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.office-work__team-image {
+  max-width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.office-work__team-placeholder {
+  font-size: 60px;
+  color: #6366f1;
+}
+
+.office-work__team-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-work__team-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 25px 0;
+}
+
+.office-work__team-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.office-work__team-item {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.office-work__cta-button {
+  background-color: #ffbc0d;
+  color: #27251f;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(255, 188, 13, 0.3);
+}
+
+.office-work__cta-button:hover {
+  background-color: #e6b327;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 188, 13, 0.4);
+}
+
+.office-work__contact {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.office-work__contact-text {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.office-work__team-image-img {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .office-work__title {
+    font-size: 40px;
+  }
+  
+  .office-work__content-grid,
+  .office-work__benefits-grid {
+    gap: 40px;
+  }
+  
+  .office-work__illustration,
+  .office-work__office-illustration {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .office-work__team-section {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .office-work {
+    padding: 40px 0;
+  }
+  
+  .office-work__container {
+    padding: 0 15px;
+  }
+  
+  .office-work__title {
+    font-size: 32px;
+  }
+  
+  .office-work__hero-placeholder {
+    height: 250px;
+  }
+  
+  .office-work__office-scene {
+    font-size: 60px;
+  }
+  
+  .office-work__content-grid,
+  .office-work__benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .office-work__illustration,
+  .office-work__office-illustration {
+    width: 200px;
+    height: 250px;
+    margin-top: 20px;
+  }
+  
+  .office-work__illustration-placeholder,
+  .office-work__office-placeholder {
+    font-size: 60px;
+  }
+  
+  .office-work__team-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .office-work__team-image {
+    height: 150px;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .office-work__team-placeholder {
+    font-size: 40px;
+  }
+  
+  .office-work__bottom-section {
+    padding: 30px 20px;
+  }
+  
+  .office-work__cta-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .office-work__title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .office-work__subtitle {
+    font-size: 20px;
+  }
+  
+  .office-work__section-title {
+    font-size: 20px;
+  }
+  
+  .office-work__team-title {
+    font-size: 20px;
+  }
+  
+  .office-work__description,
+  .office-work__position-text,
+  .office-work__benefits-item,
+  .office-work__team-item,
+  .office-work__contact-text {
+    font-size: 14px;
+  }
+  
+  .office-work__hero-placeholder {
+    height: 200px;
+  }
+  
+  .office-work__office-scene {
+    font-size: 40px;
+  }
+  
+  .office-work__illustration,
+  .office-work__office-illustration {
+    width: 160px;
+    height: 200px;
+  }
+  
+  .office-work__illustration-placeholder,
+  .office-work__office-placeholder {
+    font-size: 40px;
+  }
+  
+  .office-work__cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .office-work__bottom-section {
+    padding: 25px 15px;
+  }
+}

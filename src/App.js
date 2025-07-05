@@ -11,6 +11,12 @@ import { Search } from "./pages/Search/Search";
 import { CustomBurger } from "./pages/CustomBurger/CustomBurger";
 import { Cart } from "./pages/Cart/Cart";
 import { GoalsImpact } from "./components/GoalsImpact/GoalsImpact";
+import { DownloadMobileApp } from "./pages/DownloadMobileApp/DownloadMobileApp";
+import { UrbanCodeCollection } from "./pages/UrbanCodeCollection/UrbanCodeCollection";
+import { CityTalksCollection } from "./pages/CityTalksCollection/CityTalksCollection";
+import { Profile } from "./pages/Profile/Profile";
+import { WorkInRestaurant } from "./pages/WorkInRestaurant/WorkInRestaurant";
+import { WorkInOffice } from "./pages/WorkInOffice/WorkInOffice";
 
 function App() {
   return (
@@ -27,6 +33,12 @@ function App() {
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/search" element={<Search />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/download-app" element={<DownloadMobileApp />} />
+            <Route path="/urban-code" element={<UrbanCodeCollection />} />
+            <Route path="/city-talks" element={<CityTalksCollection />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/work-in-restaurant" element={<WorkInRestaurant />} />
+            <Route path="/work-in-office" element={<WorkInOffice />} />
           </Routes>
         </main>
 

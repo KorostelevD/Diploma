@@ -1,6 +1,7 @@
 .categories {
   display: flex;
   flex-direction: column;
+  font-family: 'Inter', sans-serif;
 }
 
 .categories__list {

@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 export const Navigation = () => {
+  const { getCartItemsCount } = useCart();
+  const cartItemsCount = getCartItemsCount();
+
   return (
     <nav className="header__nav">
       <ul className="header__nav-list">
@@ -32,7 +36,7 @@ export const Navigation = () => {
         </li>
 
         <li className="header__nav-item">
-          <Link to="/cart" className="header__top-link" aria-label="Кошик">
+          <Link to="/cart" className="header__top-link header__cart-link" aria-label="Кошик">
             <span className="header__top-icon">
               <svg
                 width="24"
@@ -66,6 +70,9 @@ export const Navigation = () => {
                   strokeLinejoin="round"
                 />
               </svg>
+              {cartItemsCount > 0 && (
+                <span className="header__cart-counter">{cartItemsCount}</span>
+              )}
             </span>
           </Link>
         </li>

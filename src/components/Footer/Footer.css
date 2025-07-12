@@ -1,27 +1,25 @@
 .footer {
   background-color: #f8f8f8;
   padding: 40px 20px;
-  color: #333;
 }
 
 .footer__links {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  justify-content: space-evenly;
 }
 
 .footer__column {
-  min-width: 200px;
-  margin-bottom: 20px;
   text-align: left;
+  width: 300px;
 }
 
 .footer__heading {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 16px;
   font-weight: bold;
+  font-size: 24px;
 }
 
 .footer__list {
@@ -32,8 +30,10 @@
 
 .footer__list-item {
   margin-bottom: 8px;
-  font-size: 14px;
   cursor: pointer;
+  font-size: 20px;
+  font-family: 'Istok Web', sans-serif;
+  text-decoration: underline;
 }
 
 .footer__list-item:hover {

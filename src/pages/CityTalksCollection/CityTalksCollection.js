@@ -12,7 +12,7 @@ export const CityTalksCollection = () => {
       <div className="city-talks__container">
         <div className="city-talks__hero">
           <h1 className="city-talks__title">
-            CITY TALKS — КОЛИ МІСТО ГОВОРИТЬ ТВОЇМ СТИЛЕМ
+            CITY TALKS — КОЛИ МІСТО<br/>ГОВОРИТЬ ТВОЇМ СТИЛЕМ
           </h1>
 
           <div className="city-talks__billboard">
@@ -44,7 +44,7 @@ export const CityTalksCollection = () => {
                 Це герой. Це співрозмовник.
               </p>
               <p className="city-talks__subsection-text">
-                У City Talks ми досліджуємо:
+                У City Talks ми:
               </p>
               <ul className="city-talks__features-list">
                 <li className="city-talks__features-item">
@@ -106,17 +106,17 @@ export const CityTalksCollection = () => {
         </div>
 
         <div className="city-talks__join-section">
-          <h3 className="city-talks__join-title">📂 Долучайся до City Talks</h3>
+          <h3 className="city-talks__join-title">📣 Долучайся до City Talks</h3>
           <div className="city-talks__join-content">
             <div className="city-talks__join-text">
               <p className="city-talks__join-description">
                 Твоє місто вже говорить. Чи чуєш ти?
               </p>
               <p className="city-talks__join-highlight">
-                💛 [Колекція City Talks]
+                💛 Колекція City Talks
               </p>
               <p className="city-talks__join-highlight">
-                💛 [Історії міста] (скоро)
+                💛 Історії міста (скоро)
               </p>
             </div>
             <div className="city-talks__join-image">

@@ -1,25 +1,22 @@
 .product-details {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
   position: relative;
   font-family: 'Inter', sans-serif;
+  padding: 0 20px 20px 20px;
 }
 
 .product-details__back-arrow {
-  position: absolute;
-  top: 20px;
-  left: 20px;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: #f5f5f5;
   transition: background-color 0.3s ease;
-  z-index: 10;
+  position: fixed;
+  width: 65px;
+  height: 45px;
+  z-index: 999;
+  margin: -30px -30px;
 }
 
 .product-details__back-arrow:hover {
@@ -27,15 +24,11 @@
 }
 
 .product-details__back-icon {
-  width: 24px;
-  height: 24px;
-  color: #333;
 }
 
 .product-details__content {
   display: flex;
   gap: 40px;
-  margin-top: 60px;
   align-items: flex-start;
 }
 
@@ -49,7 +42,6 @@
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-details__info {
@@ -58,22 +50,22 @@
 }
 
 .product-details__title {
-  font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 20px;
   line-height: 1.2;
+  font-size: 32px;
+  font-family:  'Inter', sans-serif;
 }
 
 .product-details__description {
   margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
 }
 
 .product-details__description-text {
-  font-size: 1.1rem;
-  color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .product-details__list {
@@ -84,7 +76,6 @@
 
 .product-details__list-item {
   font-size: 1rem;
-  color: #333;
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
@@ -92,7 +83,6 @@
 
 .product-details__list-item::before {
   content: "•";
-  color: #333;
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -101,8 +91,8 @@
 .product-details__price {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 30px;
+  font-family:  'Inter', sans-serif;
 }
 
 .product-details__button {
@@ -118,14 +108,17 @@
 }
 
 .product-details__button--add-to-cart {
-  background-color: #FFD700;
-  color: #333;
+  background-color: #F9EB1E;
+  font-size: 24px;
+  font-weight: 500;
+  height: 55px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
 }
 
 .product-details__button--add-to-cart:hover {
   background-color: #FFC107;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
 }
 
 .product-details__button--add-to-cart:active {
@@ -135,12 +128,16 @@
 .product-details__button--in-cart {
   background-color: #28a745;
   color: white;
+  font-size: 24px;
+  font-weight: 500;
+  height: 55px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
 }
 
 .product-details__button--in-cart:hover {
   background-color: #218838;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
 .product-details__button--in-cart:active {
@@ -207,27 +204,27 @@
   background: none;
   border: none;
   padding: 12px 24px;
-  font-size: 1rem;
   font-weight: 600;
   color: #666;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .product-details__tab-button:hover {
-  color: #333;
   background-color: #f8f8f8;
 }
 
 .product-details__tab-button--active {
-  color: #333;
   border-bottom-color: #FFD700;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .product-details__tab-content {
-  min-height: 200px;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -238,9 +235,6 @@
 
 .product-details__nutrition-summary {
   background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  padding: 16px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -248,7 +242,7 @@
 .product-details__nutrition-total {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #333;
+
 }
 
 .product-details__ingredients-list {
@@ -261,12 +255,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
-  margin-bottom: 8px;
   background: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
   transition: all 0.2s ease;
+  padding: 0 16px;
 }
 
 .product-details__ingredient-item:hover {
@@ -275,22 +266,24 @@
 }
 
 .product-details__ingredient-name {
-  font-size: 1rem;
-  color: #333;
   font-weight: 500;
+  font-size: 20px;
+  font-family:  'Inter', sans-serif;
 }
 
 .product-details__ingredient-nutrition {
-  font-size: 0.9rem;
   color: #666;
   font-weight: 400;
+  font-size: 1rem;
+  font-family:  'Inter', sans-serif;
 }
 
 .product-details__no-ingredients {
   text-align: center;
-  padding: 40px;
   color: #999;
   font-style: italic;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 768px) {

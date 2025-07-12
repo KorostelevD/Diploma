@@ -87,7 +87,7 @@ export const Home = () => {
             />
           ))}
         </Carousel>
-        {/* Navigation positioned absolutely at bottom center */}
+        {}
         <div
           className="hero-navigation"
           style={{
@@ -175,7 +175,7 @@ export const Home = () => {
               The LAB App — замовляй ще швидше!
             </h2>
             <p className="app-promotion__description">
-              Відкрий наш ресторан y своєму смартфоні: зручне меню, бонуси,
+              Відкрий наш ресторан y своєму смартфоні:<br/>зручне меню, бонуси,
               трекінг доставки та спеціальні пропозиції — лише в додатку
             </p>
             <button 

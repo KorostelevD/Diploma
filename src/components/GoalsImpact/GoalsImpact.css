@@ -1,6 +1,6 @@
 .goals-impact {
   background-color: #fff;
-  padding: 80px 20px;
+  padding: 30px 20px;
 }
 
 .goals-impact__container {
@@ -9,12 +9,12 @@
 }
 
 .goals-impact__title {
-  font-size: 2.5rem;
-  font-weight: bold;
   text-align: center;
   color: #000;
-  margin: 0 0 50px 0;
   letter-spacing: 1px;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
 }
 
 .goals-impact__image-container {
@@ -26,7 +26,6 @@
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 .goals-impact__content {
@@ -35,20 +34,21 @@
   gap: 60px;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #333;
 }
 
 .goals-impact__mission p {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .goals-impact__impact p {
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .goals-impact__impact strong {
   color: #000;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .goals-impact__impact ul {
@@ -60,7 +60,7 @@
 .goals-impact__impact li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .goals-impact__impact li:before {

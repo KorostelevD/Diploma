@@ -52,9 +52,6 @@ export const Cart = () => {
             
             <div className="cart__item-info">
               <h3 className="cart__item-name">{item.name}</h3>
-              {item.description && (
-                <p className="cart__item-description">{item.description}</p>
-              )}
             </div>
             
             <div className="cart__item-controls">
@@ -77,7 +74,7 @@ export const Cart = () => {
               </div>
               
               <div className="cart__item-price">
-                {formatPrice(item.price * item.quantity)},00 грн
+                {formatPrice(item.price * item.quantity)} грн
               </div>
             </div>
             
@@ -94,16 +91,11 @@ export const Cart = () => {
       
       <div className="cart__footer">
         <div className="cart__total">
-          <div className="cart__total-info">
-            <span className="cart__total-text">
-              Замовити продукти ({items.reduce((acc, item) => acc + item.quantity, 0)}) за {formatPrice(getCartTotal())},00 грн
-            </span>
-          </div>
-          <button 
+          <button
             className="cart__order-btn"
             onClick={handleOrder}
           >
-            Замовити продукти ({items.reduce((acc, item) => acc + item.quantity, 0)}) за {formatPrice(getCartTotal())},00 грн
+            Замовити продукти<br/>({items.reduce((acc, item) => acc + item.quantity, 0)}) за {formatPrice(getCartTotal())},00 грн
           </button>
         </div>
       </div>

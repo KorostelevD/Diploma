@@ -11,9 +11,9 @@
   font-size: 32px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ffbc0d;
+  margin: 0;
+  text-align: center;
 }
 
 .products__grid {
@@ -25,27 +25,24 @@
 
 .products__item {
   background-color: #fff;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
-  position: relative;
 }
 
 .products__item:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .products__image {
   position: relative;
-  height: 200px;
   background-color: #f8f8f8;
   display: flex;
-  align-items: center;
   justify-content: center;
   overflow: hidden;
+  align-items: end;
+  height: 180px;
 }
 
 .products__image-img {
@@ -79,32 +76,35 @@
 
 .products__badge--discount {
   left: 10px;
-  background-color: #e74c3c;
+  background-color: #126231;
+  font-weight: 600;
 }
 
 .products__info {
-  padding: 20px;
+  padding: 0 10px 0 10px;
 }
 
 .products__name {
-  font-size: 18px;
-  font-weight: 600;
   color: #333;
   margin: 0 0 10px 0;
   line-height: 1.4;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
 }
 
 .products__price-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
 }
 
 .products__price {
   font-size: 16px;
   font-weight: 700;
   margin: 0;
-  color: #ffbc0d;
+  color: #DC8E28;
 }
 
 .products__price--old {
@@ -177,7 +177,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  
+
   .products__title {
     font-size: 24px;
   }
@@ -188,27 +188,27 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-  
+
   .products__title {
     font-size: 20px;
   }
-  
+
   .products__image {
     height: 150px;
   }
-  
+
   .products__info {
     padding: 15px;
   }
-  
+
   .products__name {
     font-size: 16px;
   }
-  
+
   .products__price {
     font-size: 14px;
   }
-  
+
   .products__price--new {
     font-size: 16px;
   }
@@ -219,8 +219,8 @@
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .products__image {
     height: 150px;
   }
-} 
+}

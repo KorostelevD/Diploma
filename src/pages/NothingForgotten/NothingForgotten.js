@@ -81,7 +81,7 @@ export const NothingForgotten = () => {
               <div className="nothing-forgotten__product-info">
                 <h3 className="nothing-forgotten__product-name">{product.name}</h3>
                 <p className="nothing-forgotten__product-price">
-                  {formatPrice(product.price)},00 ₴
+                  {formatPrice(product.price)} ₴
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export const NothingForgotten = () => {
             onClick={handleOrderProducts}
             disabled={getCartItemsCount() === 0}
           >
-            Замовити продукти ({getCartItemsCount()}) за {formatPrice(getCartTotal())},00 грн
+            Замовити продукти<br/>({getCartItemsCount()}) за {formatPrice(getCartTotal())},00 грн
           </button>
         </div>
       </div>

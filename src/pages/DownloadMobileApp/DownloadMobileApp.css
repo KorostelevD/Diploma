@@ -1,10 +1,8 @@
 .download-app {
   min-height: 100vh;
-  background-color: #f8f8f8;
-  padding: 80px 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 60px 0;
 }
 
 .download-app__container {
@@ -15,33 +13,28 @@
 
 .download-app__content {
   background-color: white;
-  border-radius: 16px;
-  padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .download-app__header {
-  margin-bottom: 50px;
 }
 
 .download-app__title {
-  font-size: 36px;
   font-weight: bold;
   color: #000;
   margin: 0 0 20px 0;
   line-height: 1.2;
+  font-size: 40px;
 }
 
 .download-app__subtitle {
-  font-size: 18px;
-  color: #666;
   margin: 0;
   line-height: 1.4;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .download-app__qr-section {
-  margin: 50px 0;
   display: flex;
   justify-content: center;
 }
@@ -83,14 +76,13 @@
 }
 
 .download-app__stores {
-  margin-top: 40px;
 }
 
 .download-stores__title {
-  font-size: 18px;
   font-weight: 600;
   color: #000;
-  margin: 0 0 20px 0;
+  font-size: 24px;
+  margin: 0;
 }
 
 .store-links {
@@ -111,6 +103,10 @@
   overflow-x: auto;
   white-space: pre-wrap;
   word-break: break-all;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {

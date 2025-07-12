@@ -1,6 +1,7 @@
 .about-us {
   background-color: #f8f8f8;
-  padding: 80px 20px;
+  padding: 0 20px;
+  margin: 60px 0;
 }
 
 .about-us__container {
@@ -9,12 +10,12 @@
 }
 
 .about-us__title {
-  font-size: 2.5rem;
-  font-weight: bold;
   text-align: center;
   color: #000;
-  margin: 0 0 60px 0;
   letter-spacing: 1px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 30px 0;
 }
 
 .about-us__content {
@@ -32,15 +33,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1.1rem;
   line-height: 2;
-  color: #333;
+  font-size: 20px;
 }
 
 .about-us__list li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 15px;
 }
 
 .about-us__list li:before {

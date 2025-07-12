@@ -61,7 +61,6 @@
 
 .office-work__description {
   font-size: 16px;
-  color: #333;
   line-height: 1.6;
   margin: 0 0 40px 0;
   max-width: 800px;
@@ -123,7 +122,6 @@
 }
 
 .office-work__position-text {
-  color: #333;
 }
 
 .office-work__illustration {
@@ -176,7 +174,6 @@
   margin-bottom: 14px;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
 }
 
 .office-work__check {
@@ -250,29 +247,29 @@
 
 .office-work__team-item {
   font-size: 16px;
-  color: #333;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 .office-work__cta-button {
-  background-color: #ffbc0d;
-  color: #27251f;
   border: none;
-  border-radius: 8px;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
   align-self: flex-start;
-  box-shadow: 0 4px 15px rgba(255, 188, 13, 0.3);
+  background-color: #ffed4e;
+  color: #000;
+  padding: 12px 24px;
+  transition: background-color 0.3s ease;
+  text-transform: none;
+  font-size: 24px;
+  border-radius: 0;
+  width: auto;
+  display: inline-block;
+  height: 55px;
+  box-sizing: border-box;
 }
 
 .office-work__cta-button:hover {
-  background-color: #e6b327;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 188, 13, 0.4);
+  background-color: #FFC107;
 }
 
 .office-work__contact {
@@ -296,18 +293,18 @@
   .office-work__title {
     font-size: 40px;
   }
-  
+
   .office-work__content-grid,
   .office-work__benefits-grid {
     gap: 40px;
   }
-  
+
   .office-work__illustration,
   .office-work__office-illustration {
     width: 220px;
     height: 280px;
   }
-  
+
   .office-work__team-section {
     gap: 40px;
   }
@@ -317,57 +314,57 @@
   .office-work {
     padding: 40px 0;
   }
-  
+
   .office-work__container {
     padding: 0 15px;
   }
-  
+
   .office-work__title {
     font-size: 32px;
   }
-  
+
   .office-work__hero-placeholder {
     height: 250px;
   }
-  
+
   .office-work__office-scene {
     font-size: 60px;
   }
-  
+
   .office-work__content-grid,
   .office-work__benefits-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .office-work__illustration,
   .office-work__office-illustration {
     width: 200px;
     height: 250px;
     margin-top: 20px;
   }
-  
+
   .office-work__illustration-placeholder,
   .office-work__office-placeholder {
     font-size: 60px;
   }
-  
+
   .office-work__team-section {
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
   }
-  
+
   .office-work__team-image {
     height: 150px;
     margin: 0 auto;
     max-width: 300px;
   }
-  
+
   .office-work__team-placeholder {
     font-size: 40px;
   }
-  
+
   .office-work__bottom-section {
     padding: 30px 20px;
   }

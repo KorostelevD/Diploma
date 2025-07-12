@@ -1,9 +1,11 @@
 .header {
-  border-bottom: 1px solid #e0e0e0;
   background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #000000;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .header__right-container {
@@ -12,7 +14,6 @@
   align-self: flex-start;
   gap: 6px;
   text-decoration: none;
-  color: #333;
   font-size: 14px;
   font-weight: 500;
   padding: 6px 12px;
@@ -32,7 +33,7 @@
 
 .header__top-link:hover {
   background-color: rgba(255, 188, 13, 0.1);
-  color: #ffbc0d;
+  color: #DC8E28;
 }
 
 .header__top-icon {
@@ -56,8 +57,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 20px;
-  gap: 40px;
+  padding: 0;
+  gap: 0;
 }
 
 .header__logo-container {
@@ -79,7 +80,10 @@
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 0;
+  flex: 1;
+  margin: 0 0 10px 0;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .header__nav-item {
@@ -88,16 +92,17 @@
 
 .header__nav-link {
   text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
   padding: 10px 0;
   position: relative;
   transition: color 0.3s;
+  color: #000000;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .header__nav-link:hover {
-  color: #ffbc0d;
+  color: #DC8E28;
 }
 
 .header__nav-link::after {
@@ -151,15 +156,15 @@
   .header__nav-item {
     margin: 0 8px;
   }
-  
+
   .header__nav-link {
     font-size: 15px;
   }
-  
+
   .header__top-container {
     padding: 0 15px;
   }
-  
+
   .header__main-container {
     padding: 0 15px;
     gap: 30px;
@@ -170,11 +175,11 @@
   .header__nav {
     display: none;
   }
-  
+
   .header__main-container {
     justify-content: center;
   }
-  
+
   .header__logo {
     height: 90px;
   }
@@ -184,26 +189,26 @@
   .header__top {
     padding: 6px 0;
   }
-  
+
   .header__top-container {
     padding: 0 10px;
     gap: 10px;
   }
-  
+
   .header__top-link {
     padding: 4px 8px;
     font-size: 13px;
   }
-  
+
   .header__top-icon {
     width: 14px;
     height: 14px;
   }
-  
+
   .header__main-container {
     padding: 0 10px;
   }
-  
+
   .header__logo {
     height: 80px;
   }
@@ -215,8 +220,6 @@
 
 .header__cart-counter {
   position: absolute;
-  top: -8px;
-  right: -8px;
   background-color: #dc3545;
   color: white;
   font-size: 12px;
@@ -231,6 +234,8 @@
   min-width: 20px;
   text-align: center;
   z-index: 10;
+  top: 0;
+  right: -20px;
 }
 
 .header__cart-counter:empty {
@@ -245,4 +250,4 @@
     top: -6px;
     right: -6px;
   }
-} 
+}

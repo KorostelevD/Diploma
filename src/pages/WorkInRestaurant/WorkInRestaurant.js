@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./WorkInRestaurant.css";
 import cover from "../../assets/images/hygiene-image-1.jpg";
 import worker from "../../assets/images/worker.png";
@@ -114,9 +115,11 @@ export const WorkInRestaurant = () => {
                 </li>
               </ul>
               
-              <button className="work__cta-button">
-                Заповнити анкету
-              </button>
+              <Link to="/work-in-restaurant-apply">
+                <button className="work__cta-button">
+                  Заповнити анкету
+                </button>
+              </Link>
             </div>
           </div>
           

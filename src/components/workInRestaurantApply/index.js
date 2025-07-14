@@ -1,0 +1,9 @@
+export { PersonalInfoStep } from './PersonalInfoStep';
+export { DesiredPositionStep } from './DesiredPositionStep';
+export { ScheduleStep } from './ScheduleStep';
+export { WorkExperienceStep } from './WorkExperienceStep';
+export { WhyLabStep } from './WhyLabStep';
+export { WorkPrioritiesStep } from './WorkPrioritiesStep';
+export { InterviewReadinessStep } from './InterviewReadinessStep';
+export { CommentsStep } from './CommentsStep';
+export { PrivacyNoticeStep } from './PrivacyNoticeStep'; 

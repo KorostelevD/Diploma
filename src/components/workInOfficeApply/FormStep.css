@@ -1,0 +1,54 @@
+.form-step {
+  margin-bottom: 30px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-step__title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.form-step__subtitle {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-step__description {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-step--final {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-step__title {
+    font-size: 20px;
+  }
+  
+  .form-step__subtitle {
+    font-size: 16px;
+  }
+} 

@@ -95,7 +95,7 @@ export const Cart = () => {
             className="cart__order-btn"
             onClick={handleOrder}
           >
-            Замовити продукти<br/>({items.reduce((acc, item) => acc + item.quantity, 0)}) за {formatPrice(getCartTotal())},00 грн
+            Замовити продукти<br/>({items.reduce((acc, item) => acc + item.quantity, 0)}) за {formatPrice(getCartTotal())} грн
           </button>
         </div>
       </div>

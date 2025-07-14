@@ -1,0 +1,58 @@
+.form-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.form-navigation__button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.form-navigation__button--primary {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.form-navigation__button--primary:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+.form-navigation__button--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.form-navigation__button--secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.form-navigation__button--exit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.form-navigation__button--exit:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .form-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form-navigation__button {
+    width: 100%;
+  }
+} 

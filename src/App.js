@@ -21,6 +21,8 @@ import { WorkInOffice } from "./pages/WorkInOffice/WorkInOffice";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import { NothingForgotten } from "./pages/NothingForgotten/NothingForgotten";
 import { ProceedOrder } from "./pages/ProceedOrder/ProceedOrder";
+import { WorkInOfficeApply } from "./pages/WorkInOfficeApply/WorkInOfficeApply";
+import { WorkInRestaurantApply } from "./pages/WorkInRestaurantApply/WorkInRestaurantApply";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/work-in-restaurant" element={<WorkInRestaurant />} />
               <Route path="/work-in-office" element={<WorkInOffice />} />
+              <Route path="/work-in-office-apply" element={<WorkInOfficeApply />} />
+              <Route path="/work-in-restaurant-apply" element={<WorkInRestaurantApply />} />
               <Route path="/product/:id" element={<ProductDetails />} />
             </Routes>
           </main>

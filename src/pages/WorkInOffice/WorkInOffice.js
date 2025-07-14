@@ -4,8 +4,11 @@ import workImage1 from "../../assets/images/work-image-1.jpg";
 import workImage2 from "../../assets/images/work-image-2.jpg";
 import workImage3 from "../../assets/images/work-image-3.jpg";
 import impactStrategy from "../../assets/images/impact-strategy-cover.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const WorkInOffice = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="office-work">
       <div className="office-work__container">
@@ -129,7 +132,7 @@ export const WorkInOffice = () => {
                 </li>
               </ul>
               
-              <button className="office-work__cta-button">
+              <button className="office-work__cta-button" onClick={() => navigate("/work-in-office-apply")}>
                 Заповнити анкету
               </button>
             </div>

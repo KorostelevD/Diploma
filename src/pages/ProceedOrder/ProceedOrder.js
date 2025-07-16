@@ -261,15 +261,15 @@ export const ProceedOrder = () => {
         <div className="proceed-order__total">
           <div className="proceed-order__total-row">
             <span>Товари:</span>
-            <span>{formatPrice(getCartTotal())},00 грн</span>
+            <span>{formatPrice(getCartTotal())} грн</span>
           </div>
           <div className="proceed-order__total-row">
             <span>Доставка:</span>
-            <span>{getSelectedDeliveryMethod()?.price || 0},00 грн</span>
+            <span>{getSelectedDeliveryMethod()?.price || 0} грн</span>
           </div>
           <div className="proceed-order__total-row proceed-order__total-final">
             <span>До сплати:</span>
-            <span>{formatPrice(getTotalWithDelivery())},00 грн</span>
+            <span>{formatPrice(getTotalWithDelivery())} грн</span>
           </div>
         </div>
 

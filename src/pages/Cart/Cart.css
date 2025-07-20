@@ -217,6 +217,34 @@
   transform: translateY(0);
 }
 
+.cart__item--custom-burger {
+  height: auto;
+  min-height: 120px;
+  padding: 15px 40px 15px 15px;
+}
+
+.cart__custom-burger-ingredients {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cart__ingredients-list {
+  margin: 5px 0 0 0;
+  padding-left: 15px;
+  list-style-type: disc;
+}
+
+.cart__ingredient-item {
+  margin: 2px 0;
+  font-size: 0.85rem;
+}
+
+.cart__ingredient-price {
+  color: #28a745;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .cart {
     padding: 15px;
@@ -257,6 +285,19 @@
   .cart__item-remove {
     position: static;
     margin-left: auto;
+  }
+
+  .cart__item--custom-burger {
+    min-height: 140px;
+    padding: 12px 35px 12px 10px;
+  }
+
+  .cart__custom-burger-ingredients {
+    font-size: 0.8rem;
+  }
+
+  .cart__ingredient-item {
+    font-size: 0.75rem;
   }
 }
 

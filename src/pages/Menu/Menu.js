@@ -5,6 +5,7 @@ import Products from "../../components/menu/Products";
 import Loader from "../../components/Loader/Loader";
 import { categoryService } from "../../services/category-service";
 import { productService } from "../../services/product-service";
+import menuIcon from "../../assets/images/menu-icon.png";
 
 export const Menu = () => {
   const [categories, setCategories] = useState([]);
@@ -20,14 +21,19 @@ export const Menu = () => {
         setLoading(true);
         setError(null);
         const fetchedCategories = await categoryService.getCategories();
-        
-        if (fetchedCategories.length > 0) {
-          setCategories(fetchedCategories);
-          setSelectedCategory(fetchedCategories[0].id);
-        }
+
+        const allCategory = {
+          id: "all",
+          name: "Меню",
+          image: menuIcon,
+        };
+
+        const categoriesWithAll = [allCategory, ...fetchedCategories];
+        setCategories(categoriesWithAll);
+        setSelectedCategory("all");
       } catch (err) {
-        console.error('Error loading categories:', err);
-        setError('Failed to load categories. Please try again.');
+        console.error("Error loading categories:", err);
+        setError("Failed to load categories. Please try again.");
       } finally {
         setLoading(false);
       }
@@ -42,11 +48,20 @@ export const Menu = () => {
 
       try {
         setProductsLoading(true);
-        const fetchedProducts = await productService.getProductsByCategory(selectedCategory);
+        let fetchedProducts;
+
+        if (selectedCategory === "all") {
+          fetchedProducts = await productService.getAllProducts();
+        } else {
+          fetchedProducts = await productService.getProductsByCategory(
+            selectedCategory
+          );
+        }
+
         setProducts(fetchedProducts);
       } catch (err) {
-        console.error('Error loading products:', err);
-        setError('Failed to load products. Please try again.');
+        console.error("Error loading products:", err);
+        setError("Failed to load products. Please try again.");
         setProducts([]);
       } finally {
         setProductsLoading(false);
@@ -64,7 +79,9 @@ export const Menu = () => {
     setSelectedCategory(categoryId);
   };
 
-  const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
+  const selectedCategoryData = categories.find(
+    (cat) => cat.id === selectedCategory
+  );
 
   if (loading) {
     return (
@@ -72,9 +89,9 @@ export const Menu = () => {
         <div className="menu__container">
           <div className="menu__loading">
             <Loader
-              type="spinner" 
-              text="Завантаження меню..." 
-              size="large" 
+              type="spinner"
+              text="Завантаження меню..."
+              size="large"
               color="primary"
             />
           </div>
@@ -89,7 +106,10 @@ export const Menu = () => {
         <div className="menu__container">
           <div className="menu__error">
             <p className="menu__error-text">{error}</p>
-            <button className="menu__error-button" onClick={() => window.location.reload()}>
+            <button
+              className="menu__error-button"
+              onClick={() => window.location.reload()}
+            >
               Try Again
             </button>
           </div>
@@ -116,10 +136,10 @@ export const Menu = () => {
 
           {productsLoading ? (
             <div className="menu__products-loading">
-              <Loader 
-                type="dots" 
-                text="Завантаження продуктів..." 
-                size="medium" 
+              <Loader
+                type="dots"
+                text="Завантаження продуктів..."
+                size="medium"
                 color="primary"
               />
             </div>
@@ -129,10 +149,12 @@ export const Menu = () => {
               categoryName={selectedCategoryData?.name}
             />
           )}
-          
+
           {error && products.length === 0 && !productsLoading && (
             <div className="menu__products-error">
-              <p className="menu__products-error-text">Не вдалося завантажити продукти для цієї категорії.</p>
+              <p className="menu__products-error-text">
+                Не вдалося завантажити продукти для цієї категорії.
+              </p>
             </div>
           )}
         </div>

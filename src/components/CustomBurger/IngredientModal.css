@@ -1,0 +1,105 @@
+.modal-header {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: #f8f8f8;
+}
+
+.modal-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-back {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.modal-back:hover {
+  background-color: #e9ecef;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.ingredients-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ingredient-item {
+  background: white;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ingredient-item:hover {
+  background: #f0f0f0;
+}
+
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.ingredient-image {
+  display: none;
+}
+
+.ingredient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  width: 100%;
+}
+
+.ingredient-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.ingredient-price {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .ingredient-image {
+    height: 100px;
+  }
+  
+  .ingredient-name {
+    font-size: 1rem;
+  }
+  
+  .ingredient-price {
+    font-size: 1.1rem;
+  }
+} 

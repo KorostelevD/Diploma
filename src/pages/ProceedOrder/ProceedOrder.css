@@ -313,6 +313,33 @@
   background: #555;
 }
 
+.proceed-order__item--custom-burger {
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.proceed-order__custom-burger-ingredients {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.proceed-order__ingredients-list {
+  margin: 5px 0 0 0;
+  padding-left: 15px;
+  list-style-type: disc;
+}
+
+.proceed-order__ingredient-item {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+.proceed-order__ingredient-price {
+  color: #28a745;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .proceed-order {
     padding: 16px;
@@ -366,6 +393,18 @@
 
   .proceed-order__label {
     font-size: 15px;
+  }
+
+  .proceed-order__item--custom-burger {
+    padding: 16px 0;
+  }
+
+  .proceed-order__custom-burger-ingredients {
+    font-size: 12px;
+  }
+
+  .proceed-order__ingredient-item {
+    font-size: 11px;
   }
 }
 

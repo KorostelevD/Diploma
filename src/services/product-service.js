@@ -72,7 +72,7 @@ export const productService = {
   async getAllProducts() {
     try {
       const productsRef = collection(db, "products");
-      const q = query(productsRef, orderBy("name"));
+      const q = query(productsRef, orderBy("category"), orderBy("name"));
       const querySnapshot = await getDocs(q);
 
       const products = [];

@@ -193,7 +193,7 @@ export const ProductDetails = () => {
 
           {product.price && (
             <div className="product-details__price">
-              ${product.price}
+              ₴{product.price}
             </div>
           )}
 

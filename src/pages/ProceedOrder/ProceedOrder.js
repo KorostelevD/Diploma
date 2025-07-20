@@ -5,9 +5,10 @@ import { createOrder } from '../../services/orders-service';
 import { doc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import './ProceedOrder.css';
+import customBurgerImage from '../../assets/images/custom-burger.png';
 
 export const ProceedOrder = () => {
-  const { items, getCartTotal, clearCart } = useCart();
+  const { items, customBurgers, getCartTotal, getCustomBurgerPrice, clearCart } = useCart();
   const navigate = useNavigate();
 
   const [selectedDelivery, setSelectedDelivery] = useState('pickup');
@@ -48,6 +49,14 @@ export const ProceedOrder = () => {
     return cartTotal + deliveryPrice;
   };
 
+  const generateCustomBurgerName = (ingredients) => {
+    const mainIngredients = ingredients.filter(ing => !ing.isStandard).slice(0, 2);
+    if (mainIngredients.length > 0) {
+      return `Власний бургер з ${mainIngredients.map(ing => ing.name.toLowerCase()).join(' та ')}`;
+    }
+    return 'Власний бургер';
+  };
+
   const validateForm = () => {
     if (!phone.trim()) {
       alert('Будь ласка, введіть номер телефону');
@@ -78,6 +87,11 @@ export const ProceedOrder = () => {
         products: items.map(item => ({
           product: doc(db, 'products', item.id),
           quantity: item.quantity
+        })),
+        customBurgers: customBurgers.map(burger => ({
+          ingredients: burger.ingredients,
+          quantity: burger.quantity,
+          price: getCustomBurgerPrice(burger)
         }))
       };
       
@@ -95,7 +109,7 @@ export const ProceedOrder = () => {
     }
   };
 
-  if (items.length === 0) {
+  if (items.length === 0 && customBurgers.length === 0) {
     return (
       <div className="proceed-order">
         <div className="proceed-order__empty">
@@ -113,6 +127,7 @@ export const ProceedOrder = () => {
         
         <div className="proceed-order__items">
           <h2 className="proceed-order__section-title">Ваше замовлення</h2>
+          
           {items.map((item) => (
             <div key={item.id} className="proceed-order__item">
               <div className="proceed-order__item-image">
@@ -136,6 +151,47 @@ export const ProceedOrder = () => {
                 </div>
                 <div className="proceed-order__item-price">
                   {formatPrice(item.price * item.quantity)},00 грн
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {customBurgers.map((burger) => (
+            <div key={burger.id} className="proceed-order__item proceed-order__item--custom-burger">
+              <div className="proceed-order__item-image">
+                <img 
+                  src={customBurgerImage} 
+                  alt="Custom Burger"
+                  className="proceed-order__item-img"
+                />
+              </div>
+              
+              <div className="proceed-order__item-info">
+                <h3 className="proceed-order__item-name">{generateCustomBurgerName(burger.ingredients)}</h3>
+                <div className="proceed-order__custom-burger-ingredients">
+                  <strong>Інгредієнти:</strong>
+                  <ul className="proceed-order__ingredients-list">
+                    {burger.ingredients.map((ingredient, index) => (
+                      <li key={`${ingredient.id}-${index}`} className="proceed-order__ingredient-item">
+                        {ingredient.name}
+                        {ingredient.category === "Стандарт" && (
+                          <span className="proceed-order__ingredient-label"> Основа</span>
+                        )}
+                        {ingredient.price > 0 && (
+                          <span className="proceed-order__ingredient-price"> (+{ingredient.price} ₴)</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="proceed-order__item-details">
+                <div className="proceed-order__item-quantity">
+                  Кількість: {burger.quantity}
+                </div>
+                <div className="proceed-order__item-price">
+                  {formatPrice(getCustomBurgerPrice(burger) * burger.quantity)},00 грн
                 </div>
               </div>
             </div>

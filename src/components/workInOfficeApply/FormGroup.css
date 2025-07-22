@@ -1,15 +1,20 @@
 .form-group {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-group__label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #333;
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
+  font-family: 'Istok Web', sans-serif;
+  width: 50%;
+  text-align: right;
 }
 
 .form-group__required {
@@ -19,17 +24,98 @@
 
 .form-group__input-wrapper {
   position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.form-group-skills-container{
+  display: flex;
+  padding-left: 28%;
+}
+
+.form-group-languages-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-languages-container .form-group{
+  margin-right: 200px;
+}
+
+.form-group-languages-container .checkbox-group{
+  display: flex;
+  margin-right: 120px;
+}
+
+.form-group__group-format-container{
+  display: flex;
+  justify-content: center;
+}
+
+.form-group__group-format-container .form-group__input-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group__group-format-container .form-group__label{
+  text-align: left;
+}
+
+.form-group__person-data-container{
+  display: grid;
+  margin-right: 330px;
+}
+
+.form-group__person-data-container *{
+}
+
+.form-group__person-data-container .form-group__input-wrapper{
+  width:  100%;
+}
+
+.form-group__person-data-container .form-group__label{
+}
+
+.form-group__person-data-container .form-group{
+  margin: 8px 0 8px 0;
+}
+
+.form-group__person-data-container .form-group__error{
+  text-align: left;
+  width: 70%;
+  padding-left: 510px;
+  font-family: 'Istok Web', sans-serif;
+  font-size:  20px;
 }
 
 .form-group__input,
 .form-group__textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid black;
+  border-radius: 16px;
+  font-size: 24px;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
+  font-family: 'Istok Web', sans-serif;
+  width: 500px;
+}
+
+.form-group__input-work-places .form-group{
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.form-group__input-work-places .form-group__input-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.radio-group__input-years .radio-group{
+  margin-left: 28%;
 }
 
 .form-group__input:focus,
@@ -61,8 +147,8 @@
 .form-group__hint {
   display: block;
   margin-top: 4px;
-  color: #666;
-  font-size: 14px;
+  font-size: 20px;
+  font-family:  'Istok Web', sans-serif;
 }
 
 .form-group__error {

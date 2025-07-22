@@ -11,13 +11,13 @@ export const FormGroup = ({
 }) => {
   return (
     <div className={`form-group ${className} ${error ? 'form-group--error' : ''}`}>
-      {label && (
-        <label className="form-group__label">
-          {label}
-          {required && <span className="form-group__required">*</span>}
-        </label>
-      )}
       <div className="form-group__input-wrapper">
+        {label && (
+          <label className="form-group__label">
+            {label}
+            {required && <span className="form-group__required">*</span>}
+          </label>
+        )}
         {children}
       </div>
       {error && (

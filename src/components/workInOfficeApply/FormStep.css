@@ -4,27 +4,27 @@
 }
 
 .form-step__title {
-  color: #333;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   margin-bottom: 8px;
   text-align: center;
   line-height: 1.3;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .form-step__subtitle {
-  color: #666;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .form-step__description {
-  color: #666;
-  font-size: 16px;
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
+  font-family:  'Istok Web', sans-serif;
 }
 
 .form-step--final {

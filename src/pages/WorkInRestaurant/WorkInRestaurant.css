@@ -1,6 +1,6 @@
 .work {
   background-color: #fff;
-  padding: 60px 0;
+  padding: 0;
   min-height: 100vh;
 }
 
@@ -53,24 +53,25 @@
 }
 
 .work__subtitle {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
   color: #000;
   margin: 40px 0 20px 0;
   line-height: 1.3;
+  text-align: left;
 }
 
 .work__description {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.6;
   margin: 0 0 40px 0;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: 800px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  text-align: left;
 }
 
 .work__content {
-  margin-bottom: 80px;
 }
 
 .work__content-grid {
@@ -93,7 +94,7 @@
 }
 
 .work__section-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   color: #000;
   margin: 0 0 30px 0;
@@ -111,7 +112,7 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -135,7 +136,7 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 14px;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -154,6 +155,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  width: 377px;
 }
 
 .work__worker-placeholder {
@@ -165,7 +167,6 @@
   background-color: #f8f9fa;
   border-radius: 12px;
   padding: 50px;
-  margin-top: 60px;
 }
 
 .work__team-section {
@@ -173,7 +174,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .work__team-image {
@@ -182,6 +182,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 552px;
+  height: auto;
 }
 
 .work__team-placeholder {
@@ -195,7 +197,7 @@
 }
 
 .work__team-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   color: #000;
   margin: 0 0 25px 0;
@@ -208,8 +210,7 @@
 }
 
 .work__team-item {
-  font-size: 16px;
-
+  font-size: 24px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -237,15 +238,14 @@
 
 .work__contact {
   text-align: center;
-  padding-top: 30px;
-  border-top: 1px solid #e5e7eb;
 }
 
 .work__contact-text {
-  font-size: 16px;
-  color: #666;
+  font-size: 24px;
   margin: 0;
   line-height: 1.5;
+  font-weight: 600;
+  margin-top: 30px;
 }
 
 @media (max-width: 1024px) {

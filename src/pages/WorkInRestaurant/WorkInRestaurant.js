@@ -34,25 +34,25 @@ export const WorkInRestaurant = () => {
                 <h3 className="work__section-title">Кого ми шукаємо:</h3>
                 <ul className="work__positions-list">
                   <li className="work__positions-item">
-                    <span className="work__bullet">👥</span>
+                    <span className="work__bullet">🔸</span>
                     <span className="work__position-text">
                       <strong>Кахірів</strong> — комунікабельних і точних
                     </span>
                   </li>
                   <li className="work__positions-item">
-                    <span className="work__bullet">👨‍🍳</span>
+                    <span className="work__bullet">🔸</span>
                     <span className="work__position-text">
                       <strong>Кухарів</strong> — швидких і уважних до деталей
                     </span>
                   </li>
                   <li className="work__positions-item">
-                    <span className="work__bullet">🍽️</span>
+                    <span className="work__bullet">🔸</span>
                     <span className="work__position-text">
                       <strong>Офіціантів/бариста</strong> — з енергією й драйвом
                     </span>
                   </li>
                   <li className="work__positions-item">
-                    <span className="work__bullet">👔</span>
+                    <span className="work__bullet">🔸</span>
                     <span className="work__position-text">
                       <strong>Менеджерів змін</strong> — тих, хто знає, як надихати інших
                     </span>
@@ -64,23 +64,23 @@ export const WorkInRestaurant = () => {
                 <h3 className="work__section-title">Що ти отримаєш:</h3>
                 <ul className="work__benefits-list">
                   <li className="work__benefits-item">
-                    <span className="work__check">✓</span>
+                    <span className="work__check">✔️</span>
                     Стабільну зарплату + бонуси
                   </li>
                   <li className="work__benefits-item">
-                    <span className="work__check">✓</span>
+                    <span className="work__check">✔️</span>
                     Гнучкий графік (навчання? ми розуміємо)
                   </li>
                   <li className="work__benefits-item">
-                    <span className="work__check">✓</span>
+                    <span className="work__check">✔️</span>
                     Безкоштовне харчування
                   </li>
                   <li className="work__benefits-item">
-                    <span className="work__check">✓</span>
+                    <span className="work__check">✔️</span>
                     Знижки на продукцію
                   </li>
                   <li className="work__benefits-item">
-                    <span className="work__check">✓</span>
+                    <span className="work__check">✔️</span>
                     Кар'єрне зростання — з кухні до керівництва
                   </li>
                 </ul>
@@ -120,13 +120,15 @@ export const WorkInRestaurant = () => {
                   Заповнити анкету
                 </button>
               </Link>
+
+              <p className="work__contact-text">
+                Телефонуй або пиши нам у Direct — поговоримо.
+              </p>
             </div>
           </div>
           
           <div className="work__contact">
-            <p className="work__contact-text">
-              Телефонуй або пиши нам у Direct — поговоримо.
-            </p>
+
           </div>
         </div>
       </div>

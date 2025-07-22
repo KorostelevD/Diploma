@@ -14,7 +14,7 @@
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #e9ecef;
+  border: 2px solid black;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
@@ -40,6 +40,5 @@
   cursor: pointer;
   margin-bottom: 0;
   font-weight: normal;
-  color: #333;
-  font-size: 16px;
-} 
+  font-size: 24px;
+}

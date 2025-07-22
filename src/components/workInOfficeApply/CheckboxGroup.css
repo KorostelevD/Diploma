@@ -1,4 +1,15 @@
+.form-step__content{
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+
 .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+}
+
+.checkbox-container{
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -8,13 +19,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  width: fit-content;
 }
 
 .checkbox-group__input {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #e9ecef;
+  border: 2px solid #666;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -40,6 +52,6 @@
   cursor: pointer;
   margin-bottom: 0;
   font-weight: normal;
-  color: #333;
-  font-size: 16px;
-} 
+  font-size: 24px;
+  font-family: 'Istok Web', sans-serif;
+}

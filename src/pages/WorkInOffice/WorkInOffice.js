@@ -18,7 +18,7 @@ export const WorkInOffice = () => {
           </h1>
           
           <div className="office-work__hero-image">
-            <img src={workImage3} alt="Office workspace" />
+            <img className="office-work__hero-image-img" src={workImage3} alt="Office workspace" />
           </div>
           
           <h2 className="office-work__subtitle">
@@ -36,31 +36,31 @@ export const WorkInOffice = () => {
               <h3 className="office-work__section-title">Хто нам потрібен:</h3>
               <ul className="office-work__positions-list">
                 <li className="office-work__positions-item">
-                  <span className="office-work__bullet">🎨</span>
+                  <span className="office-work__bullet">🔸</span>
                   <span className="office-work__position-text">
                     <strong>Дизайнерів</strong> — які не просто розмальовують, а створюють історії
                   </span>
                 </li>
                 <li className="office-work__positions-item">
-                  <span className="office-work__bullet">📱</span>
+                  <span className="office-work__bullet">🔸</span>
                   <span className="office-work__position-text">
                     <strong>SMM-фахівців</strong> — які вміють ловити ритм мережі
                   </span>
                 </li>
                 <li className="office-work__positions-item">
-                  <span className="office-work__bullet">📈</span>
+                  <span className="office-work__bullet">🔸</span>
                   <span className="office-work__position-text">
                     <strong>HR і рекрутерів</strong> — які бачать у людях потенціал
                   </span>
                 </li>
                 <li className="office-work__positions-item">
-                  <span className="office-work__bullet">💡</span>
+                  <span className="office-work__bullet">🔸</span>
                   <span className="office-work__position-text">
                     <strong>Діджітал / креаторів контенту</strong> — з любов'ю до деталей
                   </span>
                 </li>
                 <li className="office-work__positions-item">
-                  <span className="office-work__bullet">📊</span>
+                  <span className="office-work__bullet">🔸</span>
                   <span className="office-work__position-text">
                     <strong>Менеджерів проєктів</strong> — які вміють тримати хаос у фокусі
                   </span>
@@ -81,23 +81,23 @@ export const WorkInOffice = () => {
                 <h3 className="office-work__section-title">Що ми даємо:</h3>
                 <ul className="office-work__benefits-list">
                   <li className="office-work__benefits-item">
-                    <span className="office-work__check">✓</span>
+                    <span className="office-work__check">✔️</span>
                     Офіс у серці міста (ідеальний фон для сторіс)
                   </li>
                   <li className="office-work__benefits-item">
-                    <span className="office-work__check">✓</span>
+                    <span className="office-work__check">✔️</span>
                     Мінімум бюрократії — максимум дозволено
                   </li>
                   <li className="office-work__benefits-item">
-                    <span className="office-work__check">✓</span>
+                    <span className="office-work__check">✔️</span>
                     Гнучкий графік та можливість віддаленої роботи
                   </li>
                   <li className="office-work__benefits-item">
-                    <span className="office-work__check">✓</span>
+                    <span className="office-work__check">✔️</span>
                     Команда, яка не заморожується цифрочками
                   </li>
                   <li className="office-work__benefits-item">
-                    <span className="office-work__check">✓</span>
+                    <span className="office-work__check">✔️</span>
                     Реальні проєкти, які бачать люди
                   </li>
                 </ul>
@@ -135,13 +135,14 @@ export const WorkInOffice = () => {
               <button className="office-work__cta-button" onClick={() => navigate("/work-in-office-apply")}>
                 Заповнити анкету
               </button>
+
+              <div className="office-work__contact">
+                <p className="office-work__contact-text">
+                  Телефонуй або пиши нам у Direct — поговоримо.
+                </p>
+              </div>
+
             </div>
-          </div>
-          
-          <div className="office-work__contact">
-            <p className="office-work__contact-text">
-              Телефонуй або пиши нам у Direct — поговоримо.
-            </p>
           </div>
         </div>
       </div>

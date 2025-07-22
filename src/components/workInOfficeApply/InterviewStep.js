@@ -1,9 +1,9 @@
 import React from 'react';
-import { FormStep } from './FormStep';
-import { FormGroup } from './FormGroup';
-import { RadioGroup } from './RadioGroup';
+import {FormStep} from './FormStep';
+import {FormGroup} from './FormGroup';
+import {RadioGroup} from './RadioGroup';
 
-export const InterviewStep = ({ formData, onInputChange }) => {
+export const InterviewStep = ({formData, onInputChange}) => {
   const formatOptions = ['Онлайн', 'Офлайн (у закладі)'];
 
   return (
@@ -16,7 +16,7 @@ export const InterviewStep = ({ formData, onInputChange }) => {
           onChange={(e) => onInputChange('interviewDate', e.target.value)}
         />
       </FormGroup>
-      
+
       <FormGroup label="Зручний час:">
         <input
           type="time"
@@ -25,15 +25,16 @@ export const InterviewStep = ({ formData, onInputChange }) => {
           onChange={(e) => onInputChange('interviewTime', e.target.value)}
         />
       </FormGroup>
-      
-      <FormGroup label="Формат:">
-        <RadioGroup
-          options={formatOptions}
-          selectedValue={formData.interviewFormat}
-          onChange={(value) => onInputChange('interviewFormat', value)}
-          name="interviewFormat"
-        />
-      </FormGroup>
+      <div className="form-group__group-format-container">
+        <FormGroup label="Формат:">
+          <RadioGroup
+            options={formatOptions}
+            selectedValue={formData.interviewFormat}
+            onChange={(value) => onInputChange('interviewFormat', value)}
+            name="interviewFormat"
+          />
+        </FormGroup>
+      </div>
     </FormStep>
   );
 }; 

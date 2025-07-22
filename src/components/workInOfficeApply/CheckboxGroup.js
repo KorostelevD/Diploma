@@ -9,6 +9,7 @@ export const CheckboxGroup = ({
 }) => {
   return (
     <div className="checkbox-group">
+      <div className="checkbox-container">
       {options.map((option) => (
         <div key={option} className="checkbox-group__item">
           <input
@@ -26,6 +27,7 @@ export const CheckboxGroup = ({
           </label>
         </div>
       ))}
+      </div>
     </div>
   );
 }; 

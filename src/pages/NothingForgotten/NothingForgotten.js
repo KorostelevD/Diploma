@@ -7,8 +7,29 @@ import './NothingForgotten.css';
 export const NothingForgotten = () => {
   const [suggestedProducts, setSuggestedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { addItem, getCartTotal, getCartItemsCount } = useCart();
+  const { addItem, getCartTotal, getCartItemsCount, items, customBurgers, getCustomBurgerPrice } = useCart();
   const navigate = useNavigate();
+
+  const calculateDiscountedPrice = (price, discount) => {
+    if (!discount || discount <= 0) return price;
+    return Math.round(price * (1 - discount / 100));
+  };
+
+  const getItemFinalPrice = (item) => {
+    return calculateDiscountedPrice(item.price, item.discount);
+  };
+
+  const getCartTotalWithDiscounts = () => {
+    const regularItemsTotal = items.reduce((total, item) => {
+      return total + (getItemFinalPrice(item) * item.quantity);
+    }, 0);
+    
+    const customBurgersTotal = customBurgers.reduce((total, burger) => {
+      return total + (getCustomBurgerPrice(burger) * burger.quantity);
+    }, 0);
+    
+    return regularItemsTotal + customBurgersTotal;
+  };
 
   useEffect(() => {
     const fetchSuggestedProducts = async () => {
@@ -81,7 +102,7 @@ export const NothingForgotten = () => {
               <div className="nothing-forgotten__product-info">
                 <h3 className="nothing-forgotten__product-name">{product.name}</h3>
                 <p className="nothing-forgotten__product-price">
-                  {formatPrice(product.price)} ₴
+                  {formatPrice(getItemFinalPrice(product))} ₴
                 </p>
               </div>
             </div>
@@ -94,7 +115,7 @@ export const NothingForgotten = () => {
             onClick={handleOrderProducts}
             disabled={getCartItemsCount() === 0}
           >
-            Замовити продукти<br/>({getCartItemsCount()}) за {formatPrice(getCartTotal())},00 грн
+            Замовити продукти<br/>({getCartItemsCount()}) за {formatPrice(getCartTotalWithDiscounts())} грн
           </button>
         </div>
       </div>

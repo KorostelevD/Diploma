@@ -131,7 +131,7 @@ export const Menu = () => {
 
         <div className="menu__content">
           <div className="menu__header">
-            <h1 className="menu__title">Меню</h1>
+             {/*<h1 className="menu__title">Меню</h1>*/} 
           </div>
 
           {productsLoading ? (

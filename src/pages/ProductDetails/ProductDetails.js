@@ -50,6 +50,11 @@ export const ProductDetails = () => {
   const isInCart = product ? getCartItem(product.id) : false;
   const cartItem = isInCart ? getCartItem(product.id) : null;
 
+  const calculateDiscountedPrice = (price, discount) => {
+    const discountedPrice = price * (1 - discount / 100);
+    return `${Math.round(discountedPrice)} ₴`;
+  };
+
   const calculateTotals = () => {
     if (!product?.ingredients || !Array.isArray(product.ingredients)) {
       return { totalWeight: 0, totalCalories: 0 };
@@ -193,7 +198,18 @@ export const ProductDetails = () => {
 
           {product.price && (
             <div className="product-details__price">
-              ₴{product.price}
+              {product.discount ? (
+                <div className="product-details__price-container">
+                  <span className="product-details__price product-details__price--old">
+                    ₴{product.price}
+                  </span>
+                  <span className="product-details__price product-details__price--new">
+                    {calculateDiscountedPrice(product.price, product.discount)}
+                  </span>
+                </div>
+              ) : (
+                <span className="product-details__price">₴{product.price}</span>
+              )}
             </div>
           )}
 

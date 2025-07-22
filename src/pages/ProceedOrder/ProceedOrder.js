@@ -19,6 +19,27 @@ export const ProceedOrder = () => {
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const calculateDiscountedPrice = (price, discount) => {
+    if (!discount || discount <= 0) return price;
+    return Math.round(price * (1 - discount / 100));
+  };
+
+  const getItemFinalPrice = (item) => {
+    return calculateDiscountedPrice(item.price, item.discount);
+  };
+
+  const getCartTotalWithDiscounts = () => {
+    const regularItemsTotal = items.reduce((total, item) => {
+      return total + (getItemFinalPrice(item) * item.quantity);
+    }, 0);
+    
+    const customBurgersTotal = customBurgers.reduce((total, burger) => {
+      return total + (getCustomBurgerPrice(burger) * burger.quantity);
+    }, 0);
+    
+    return regularItemsTotal + customBurgersTotal;
+  };
+
   const deliveryMethods = [
     { id: 'pickup', label: 'Самовивіз з ресторану', price: 0 },
     { id: 'delivery', label: 'Доставка кур\'єром', price: 50 },
@@ -44,7 +65,7 @@ export const ProceedOrder = () => {
   };
 
   const getTotalWithDelivery = () => {
-    const cartTotal = getCartTotal();
+    const cartTotal = getCartTotalWithDiscounts();
     const deliveryPrice = getSelectedDeliveryMethod()?.price || 0;
     return cartTotal + deliveryPrice;
   };
@@ -150,7 +171,7 @@ export const ProceedOrder = () => {
                   Кількість: {item.quantity}
                 </div>
                 <div className="proceed-order__item-price">
-                  {formatPrice(item.price * item.quantity)},00 грн
+                  {formatPrice(getItemFinalPrice(item) * item.quantity)} грн
                 </div>
               </div>
             </div>
@@ -191,14 +212,14 @@ export const ProceedOrder = () => {
                   Кількість: {burger.quantity}
                 </div>
                 <div className="proceed-order__item-price">
-                  {formatPrice(getCustomBurgerPrice(burger) * burger.quantity)},00 грн
+                  {formatPrice(getCustomBurgerPrice(burger) * burger.quantity)} грн
                 </div>
               </div>
             </div>
           ))}
           
           <div className="proceed-order__subtotal">
-            <span>Вартість товарів: {formatPrice(getCartTotal())},00 грн</span>
+            <span>Вартість товарів: {formatPrice(getCartTotalWithDiscounts())} грн</span>
           </div>
         </div>
 
@@ -317,7 +338,7 @@ export const ProceedOrder = () => {
         <div className="proceed-order__total">
           <div className="proceed-order__total-row">
             <span>Товари:</span>
-            <span>{formatPrice(getCartTotal())} грн</span>
+            <span>{formatPrice(getCartTotalWithDiscounts())} грн</span>
           </div>
           <div className="proceed-order__total-row">
             <span>Доставка:</span>

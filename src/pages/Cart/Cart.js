@@ -17,6 +17,15 @@ export const Cart = () => {
   } = useCart();
   const navigate = useNavigate();
 
+  const calculateDiscountedPrice = (price, discount) => {
+    if (!discount || discount <= 0) return price;
+    return Math.round(price * (1 - discount / 100));
+  };
+
+  const getItemFinalPrice = (item) => {
+    return calculateDiscountedPrice(item.price, item.discount);
+  };
+
   const handleQuantityChange = (productId, currentQuantity, delta) => {
     const newQuantity = currentQuantity + delta;
     if (newQuantity > 0) {
@@ -41,6 +50,18 @@ export const Cart = () => {
 
   const formatPrice = (price) => {
     return parseFloat(price).toFixed(2);
+  };
+
+  const getCartTotalWithDiscounts = () => {
+    const regularItemsTotal = items.reduce((total, item) => {
+      return total + (getItemFinalPrice(item) * item.quantity);
+    }, 0);
+    
+    const customBurgersTotal = customBurgers.reduce((total, burger) => {
+      return total + (getCustomBurgerPrice(burger) * burger.quantity);
+    }, 0);
+    
+    return regularItemsTotal + customBurgersTotal;
   };
 
   const getTotalItemsCount = () => {
@@ -99,7 +120,7 @@ export const Cart = () => {
               </div>
               
               <div className="cart__item-price">
-                {formatPrice(item.price * item.quantity)} грн
+                {formatPrice(getItemFinalPrice(item) * item.quantity)} грн
               </div>
             </div>
             
@@ -184,7 +205,7 @@ export const Cart = () => {
             className="cart__order-btn"
             onClick={handleOrder}
           >
-            Замовити продукти<br/>({getTotalItemsCount()}) за {formatPrice(getCartTotal())} грн
+            Замовити продукти<br/>({getTotalItemsCount()}) за {formatPrice(getCartTotalWithDiscounts())} грн
           </button>
         </div>
       </div>

@@ -95,6 +95,28 @@
   font-family:  'Inter', sans-serif;
 }
 
+.product-details__price-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.product-details__price--old {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.product-details__price--new {
+  color: #e74c3c;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
 .product-details__button {
   border: none;
   padding: 15px 30px;
@@ -309,6 +331,18 @@
   }
 
   .product-details__price {
+    font-size: 1.5rem;
+  }
+
+  .product-details__price-container {
+    gap: 10px;
+  }
+
+  .product-details__price--old {
+    font-size: 1.2rem;
+  }
+
+  .product-details__price--new {
     font-size: 1.5rem;
   }
 

@@ -2,9 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 export const Navigation = () => {
   const { getCartItemsCount } = useCart();
   const cartItemsCount = getCartItemsCount();
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
 
   return (
     <nav className="header__nav">

@@ -7,7 +7,7 @@ import { db } from '../../firebase';
 import './ProceedOrder.css';
 
 export const ProceedOrder = () => {
-  const { items, getCartTotal, clearCart } = useCart();
+  const { items, customBurgers, getCartTotal, clearCart } = useCart();
   const navigate = useNavigate();
 
   const [selectedDelivery, setSelectedDelivery] = useState('pickup');

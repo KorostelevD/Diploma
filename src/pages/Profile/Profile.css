@@ -1,29 +1,28 @@
 .profile {
   background-color: #fff;
   min-height: 100vh;
-  padding: 60px 0;
+  /*padding: 60px 0;*/
 }
 
 .profile__container {
-  max-width: 600px;
-  margin: 0 auto;
+  /*max-width: 600px;*/
+  /*margin: 0 auto;*/
   padding: 0 20px;
 }
 
 .profile__content {
   background-color: white;
-  border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 20px 0 20px;
 }
 
 .profile__title {
-  font-size: 32px;
   font-weight: bold;
   color: #000;
-  margin: 0 0 40px 0;
+  margin: 0;
   text-align: center;
   line-height: 1.2;
+  font-size: 2.5rem;
 }
 
 .profile__form {
@@ -34,19 +33,19 @@
 .profile__field {
   display: flex;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0 20px;
+  border-bottom: 1px solid black;
   gap: 16px;
   position: relative;
+  min-height: 108px;
 }
 
 .profile__field:last-child {
-  border-bottom: none;
 }
 
 .profile__field-icon {
   flex-shrink: 0;
-  width: 24px;
+  width: 50px;
   height: 24px;
   display: flex;
   align-items: center;
@@ -68,14 +67,13 @@
 }
 
 .profile__field-label {
-  font-size: 14px;
-  color: #666;
+  font-size: 24px;
   margin: 0;
   font-weight: 500;
 }
 
 .profile__field-value {
-  font-size: 16px;
+  font-size: 20px;
   color: #000;
   font-weight: 500;
   line-height: 1.4;
@@ -94,7 +92,7 @@
   width: 16px;
   height: 16px;
   stroke-width: 2;
-  color: #999;
+  /*color: #999;*/
 }
 
 .profile__field--action {
@@ -103,14 +101,15 @@
 }
 
 .profile__field--action:hover {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin: 0 -12px;
-  padding: 20px 12px;
+  background-color: #F5F5F5;
+}
+
+.profile__field:hover{
+  background-color: #F5F5F5;
 }
 
 .profile__field--action .profile__field-label {
-  font-size: 16px;
+  font-size: 24px;
   color: #000;
   font-weight: 500;
 }
@@ -120,7 +119,6 @@
 }
 
 .profile__field--action:hover .profile__arrow-icon {
-
 }
 
 @media (max-width: 768px) {

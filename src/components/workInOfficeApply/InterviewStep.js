@@ -25,6 +25,7 @@ export const InterviewStep = ({formData, onInputChange}) => {
           onChange={(e) => onInputChange('interviewTime', e.target.value)}
         />
       </FormGroup>
+
       <div className="form-group__group-format-container">
         <FormGroup label="Формат:">
           <RadioGroup
@@ -35,6 +36,7 @@ export const InterviewStep = ({formData, onInputChange}) => {
           />
         </FormGroup>
       </div>
+
     </FormStep>
   );
 }; 

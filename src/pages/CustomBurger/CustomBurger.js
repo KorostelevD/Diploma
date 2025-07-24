@@ -258,7 +258,7 @@ export const CustomBurger = () => {
               className="custom-burger__order-btn"
               onClick={handleAddToCart}
             >
-              додати до кошика
+              Додати до кошика
             </button>
           </div>
 

@@ -42,9 +42,9 @@
   transition: box-shadow 0.2s ease;
   border: 1px solid #000;
   padding: 0 40px 0 15px;
-  height: 100px;
+  /*height: 100px;*/
+  min-height: 100px;
   margin-bottom: 30px;
-
 }
 
 .cart__item:hover {
@@ -224,6 +224,30 @@
 
 .cart__order-btn:active {
   transform: translateY(0);
+}
+
+.cart__custom-burger-ingredients{
+  font-family:  'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.cart__ingredients-title{
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Istok Web', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cart__ingredients-list{
+  margin: 0;
+  padding-inline-start: 35px;
+}
+
+.cart__ingredient-item{
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {

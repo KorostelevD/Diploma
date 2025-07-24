@@ -1,7 +1,6 @@
 .custom-burger {
   min-height: 100vh;
-  background: #f5f5f5;
-  padding: 2rem 0;
+  padding: 10px 0;
   font-family: 'Inter', sans-serif;
 }
 
@@ -15,8 +14,7 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 2rem;
+  margin: 0 0 20px 0;
 }
 
 .custom-burger__content {
@@ -51,14 +49,18 @@
 
 .custom-burger__ingredient {
   background: white;
-  border: 1px solid #333;
-  height: 64px;
-  padding: 1rem;
+  border: 1px solid black;
+  /*height: 64px;*/
+  height: 102px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+  width: 353px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .custom-burger__ingredient--clickable {
@@ -66,8 +68,7 @@
 }
 
 .custom-burger__ingredient--clickable:hover {
-  background-color: #f8f9fa;
-  border-color: #007bff;
+  background-color: #F5F5F5;
 }
 
 .custom-burger__ingredient-info {
@@ -79,7 +80,6 @@
 
 .custom-burger__ingredient-name {
   font-weight: 600;
-  color: #333;
   font-size: 26px;
   text-transform: uppercase;
   display: flex;
@@ -89,46 +89,49 @@
 
 .custom-burger__remove-btn {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background: #dc3545;
-  color: white;
-  border: none;
+  top: 3px;
+  right: 3px;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+  transform: scale(1.1);
+  background: #f0f0f0;
+  width: 32px;
+  height: 32px;
+  font-size: 30px;
+  color: #666;
+  padding-top: 5px;
+  border:  none;
+  border: 1px solid #E1E1E1;
 }
 
 .custom-burger__remove-btn:hover {
-  background: #c82333;
+  /*background-color: #c82333;*/
+  transform: scale(1.1);
+  background: #e0e0e0;
 }
 
 .custom-burger__add-btn {
-  background: #f8f9fa;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  background: white;
+  border: 1px solid #888;
   padding: 1rem;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   min-height: 60px;
-  color: #666;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-width: 300px;
+  margin-bottom: 10px;
 }
 
 .custom-burger__add-btn:hover {
-  border-color: #999;
-  background: #eee;
+  background: #F5F5F5;
 }
 
 .custom-burger__summary {
@@ -136,11 +139,13 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  /*margin-top: -70px;*/
+  margin-top: -30px;
 }
 
 .custom-burger__burger-image {
-  width: 100%;
-  max-width: 400px;
+  /*width: 100%;*/
+  /*max-width: 400px;*/
   height: auto;
 }
 
@@ -157,7 +162,7 @@
   justify-content: center;
   width: 100%;
   min-height: 300px;
-  padding: 1rem;
+  /*padding: 1rem;*/
   position: relative;
 }
 
@@ -219,25 +224,28 @@
 .custom-burger__total-price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
   text-align: center;
 }
 
 .custom-burger__order-btn {
-  background: #FFD700;
-  color: #333;
+  background-color: #ffed4e;
+  color: #000;
   border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 12px 24px;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  text-transform: none;
+  font-size: 24px;
+  border-radius: 0;
+  /*align-self: flex-start;*/
+  width: auto;
+  display: inline-block;
+  height: 55px;
+  box-sizing: border-box;
 }
 
 .custom-burger__order-btn:hover {
-  background: #FFC700;
+  background-color: #FFC107;
 }
 
 .custom-burger-loading,

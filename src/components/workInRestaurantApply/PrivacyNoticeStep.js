@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormStep } from '../workInOfficeApply/FormStep';
+import "./PrivacyNoticeStep.css";
 
 export const PrivacyNoticeStep = () => {
   return (
@@ -8,12 +9,7 @@ export const PrivacyNoticeStep = () => {
         <div style={{ fontSize: '48px', marginBottom: '20px' }}>
           🔒
         </div>
-        <p style={{ 
-          fontSize: '18px', 
-          lineHeight: '1.6', 
-          color: '#333',
-          marginBottom: '30px'
-        }}>
+        <p className="privacy-notice-step__text">
           Вся інформація зберігається конфіденційно та<br />
           використовується лише для відбору персоналу.
         </p>

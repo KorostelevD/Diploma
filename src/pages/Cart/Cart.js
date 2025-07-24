@@ -147,7 +147,7 @@ export const Cart = () => {
             <div className="cart__item-info">
               <h3 className="cart__item-name">Бургер “Збирай мене“</h3>
               <div className="cart__custom-burger-ingredients">
-                <strong>Інгредієнти:</strong>
+                <p className="cart__ingredients-title">Інгредієнти:</p>
                 <ul className="cart__ingredients-list">
                   {burger.ingredients.map((ingredient, index) => (
                     <li key={`${ingredient.id}-${index}`} className="cart__ingredient-item">

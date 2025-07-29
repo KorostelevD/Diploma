@@ -1,12 +1,30 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import "./Profile.css";
 
 export const Profile = () => {
-  const profileData = {
-    name: "Оксана",
-    email: "user@gmail.com",
-    phone: "+38097657790"
+  const { user, logout, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    const result = await logout();
+    if (result.success) {
+      navigate("/");
+    }
   };
+
+  if (loading || !user) {
+    return (
+      <section className="profile">
+        <div className="profile__container">
+          <div className="profile__content">
+            <div className="profile__loading">Завантаження...</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="profile">
@@ -65,7 +83,7 @@ export const Profile = () => {
               </div>
               <div className="profile__field-content">
                 <label className="profile__field-label">Ім'я</label>
-                <div className="profile__field-value">{profileData.name}</div>
+                <div className="profile__field-value">{user?.displayName || "Не вказано"}</div>
               </div>
             </div>
 
@@ -79,7 +97,7 @@ export const Profile = () => {
               </div>
               <div className="profile__field-content">
                 <label className="profile__field-label">Адреса ел. пошти</label>
-                <div className="profile__field-value">{profileData.email}</div>
+                <div className="profile__field-value">{user?.email || "Не вказано"}</div>
               </div>
             </div>
 
@@ -93,7 +111,7 @@ export const Profile = () => {
               </div>
               <div className="profile__field-content">
                 <label className="profile__field-label">Номер телефону</label>
-                <div className="profile__field-value">{profileData.phone}</div>
+                <div className="profile__field-value">{user?.phone || "Не вказано"}</div>
               </div>
             </div>
 
@@ -143,6 +161,22 @@ export const Profile = () => {
               </div>
               <div className="profile__field-content">
                 <div className="profile__field-label">Конфіденційність</div>
+              </div>
+              <div className="profile__field-arrow">
+                <svg className="profile__arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div className="profile__field profile__field--action profile__field--logout" onClick={handleLogout}>
+              <div className="profile__field-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 7L15.59 8.41L21.17 14H3V16H21.17L15.59 21.59L17 23L25 15L17 7ZM5 5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H12V19H5V5Z" fill="currentColor" transform="scale(2)"/>
+                </svg>
+              </div>
+              <div className="profile__field-content">
+                <div className="profile__field-label">Вийти з облікового запису</div>
               </div>
               <div className="profile__field-arrow">
                 <svg className="profile__arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">

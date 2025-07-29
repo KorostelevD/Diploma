@@ -251,3 +251,59 @@
     right: -6px;
   }
 }
+
+.header__auth-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.header__login-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.header__login-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #DC8E28;
+  color: #DC8E28;
+}
+
+.header__logout-btn {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.header__logout-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .header__auth-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__nav-item .header__auth-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__auth-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

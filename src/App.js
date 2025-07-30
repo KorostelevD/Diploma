@@ -24,6 +24,8 @@ import { ProceedOrder } from "./pages/ProceedOrder/ProceedOrder";
 import { WorkInOfficeApply } from "./pages/WorkInOfficeApply/WorkInOfficeApply";
 import { WorkInRestaurantApply } from "./pages/WorkInRestaurantApply/WorkInRestaurantApply";
 import { DynamicAuth, ForgotPassword } from "./components/Auth";
+import { UserOrders } from "./pages/UserOrders/UserOrders";
+import { AdminOrders } from "./pages/AdminOrders/AdminOrders";
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -72,6 +74,10 @@ function App() {
           />
 
           {isAuthenticated && <Route path="/profile" element={<Profile />} />}
+
+          {isAuthenticated && <Route path="/user-orders" element={<UserOrders />} />}
+
+          {isAuthenticated && <Route path="/admin-orders" element={<AdminOrders />} />}
 
           <Route path="/proceed-order" element={<ProceedOrder />} />
 

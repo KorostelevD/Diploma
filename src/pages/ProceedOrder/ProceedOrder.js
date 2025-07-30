@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useCart} from '../../context/CartContext';
+import {useAuth} from '../../context/AuthContext';
 import {createOrder} from '../../services/orders-service';
 import {doc} from 'firebase/firestore';
 import {db} from '../../firebase';
@@ -9,6 +10,7 @@ import customBurgerImage from "../../assets/images/custom-burger.png";
 
 export const ProceedOrder = () => {
   const {items, customBurgers, getCustomBurgerPrice, getCartTotal, clearCart} = useCart();
+  const {user, isAuthenticated} = useAuth();
   const navigate = useNavigate();
 
   const [selectedDelivery, setSelectedDelivery] = useState('pickup');
@@ -18,6 +20,12 @@ export const ProceedOrder = () => {
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (isAuthenticated && user && user.phone) {
+      setPhone(user.phone);
+    }
+  }, [isAuthenticated, user]);
 
   const deliveryMethods = [
     {id: 'pickup', label: 'Самовивіз з ресторану', price: 0},
@@ -87,6 +95,7 @@ export const ProceedOrder = () => {
         customBurgers: customBurgers.map((burger) => (
           burger
         )),
+        user: isAuthenticated && user ? doc(db, 'users', user.uid) : null,
       };
 
       /*customBurgers.map((burger) => (

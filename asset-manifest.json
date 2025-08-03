@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Diploma/static/css/main.90a1f27d.css",
+    "main.js": "/Diploma/static/js/main.9c6cd481.js",
+    "static/media/impact-strategy-cover.jpg": "/Diploma/static/media/impact-strategy-cover.e18619d6074ac3f19e60.jpg",
+    "static/media/Adversiment-Billboard-mockup-vol4.png": "/Diploma/static/media/Adversiment-Billboard-mockup-vol4.060bc5d844669f1c212f.png",
+    "static/media/slide2.jpg": "/Diploma/static/media/slide2.e83b2fd5d6cc5761a52c.jpg",
+    "static/media/slide1.jpg": "/Diploma/static/media/slide1.0cac0201227b5ef38991.jpg",
+    "static/media/hygiene-image-1.jpg": "/Diploma/static/media/hygiene-image-1.ba9b5fca3e9b4b69b767.jpg",
+    "static/media/hygiene-image-4.jpg": "/Diploma/static/media/hygiene-image-4.a54bad21fe155bea3b79.jpg",
+    "static/media/worker.png": "/Diploma/static/media/worker.2bab429ae630ec826db1.png",
+    "static/media/urban-code-main.png": "/Diploma/static/media/urban-code-main.d0ee53364f78bbe15372.png",
+    "static/media/Free-Store-Sign-Wall-Mounted-Mockup-PSD.png": "/Diploma/static/media/Free-Store-Sign-Wall-Mounted-Mockup-PSD.6690eead96406b9ac00d.png",
+    "static/media/promoImage.jpg": "/Diploma/static/media/promoImage.4a6ae5321f8f8e177287.jpg",
+    "static/media/work-image-3.jpg": "/Diploma/static/media/work-image-3.68db25329cbc0ad0a0b2.jpg",
+    "static/media/impact-strategy-burger.jpg": "/Diploma/static/media/impact-strategy-burger.68a7ed9ed0d319656c29.jpg",
+    "static/media/hygiene-image-3.jpg": "/Diploma/static/media/hygiene-image-3.509a8fa26e8c0d76206f.jpg",
+    "static/media/download.png": "/Diploma/static/media/download.2ba7ffc2fac3b81ffe9e.png",
+    "static/media/hygiene-image-2.jpg": "/Diploma/static/media/hygiene-image-2.eec2e340f629aabaf1ac.jpg",
+    "static/media/work-image-1.jpg": "/Diploma/static/media/work-image-1.9180b0e40c1e0ef1dbc3.jpg",
+    "static/media/coctails.png": "/Diploma/static/media/coctails.2c24fbaa972b941fe8b2.png",
+    "static/media/about-us-photo-2.jpg": "/Diploma/static/media/about-us-photo-2.d521c010262046b8fb77.jpg",
+    "static/media/haisengberg-toy.png": "/Diploma/static/media/haisengberg-toy.e7af7ae142a4f297bf55.png",
+    "static/media/about-us-photo-1.jpg": "/Diploma/static/media/about-us-photo-1.95000ff038cbc322bc75.jpg",
+    "static/media/lab-juice.png": "/Diploma/static/media/lab-juice.89cae2a0af43fa08fd45.png",
+    "static/media/work-image-2.jpg": "/Diploma/static/media/work-image-2.676b3bce59378b071612.jpg",
+    "static/media/Download_on_the_App_Store_Badge.svg": "/Diploma/static/media/Download_on_the_App_Store_Badge.e45ea3521be08482dc5150eb6b218503.svg",
+    "static/media/Google_Play_Store_badge_EN.svg": "/Diploma/static/media/Google_Play_Store_badge_EN.b875ec90c7b67a386c6cab66239c6c0e.svg",
+    "index.html": "/Diploma/index.html",
+    "main.90a1f27d.css.map": "/Diploma/static/css/main.90a1f27d.css.map",
+    "main.9c6cd481.js.map": "/Diploma/static/js/main.9c6cd481.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90a1f27d.css",
+    "static/js/main.9c6cd481.js"
+  ]
+}

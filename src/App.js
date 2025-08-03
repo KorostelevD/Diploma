@@ -26,14 +26,14 @@ import { WorkInRestaurantApply } from "./pages/WorkInRestaurantApply/WorkInResta
 import { DynamicAuth, ForgotPassword } from "./components/Auth";
 import { UserOrders } from "./pages/UserOrders/UserOrders";
 import { AdminOrders } from "./pages/AdminOrders/AdminOrders";
-import { BrowserRouter } from "react-router-dom";
+
 
 
 function App() {
   const { isAuthenticated } = useAuth();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    
     <div className="app">
       <Header />
 
@@ -96,7 +96,7 @@ function App() {
 
       <Footer />
     </div>
-    </BrowserRouter>
+    
   );
 }
 

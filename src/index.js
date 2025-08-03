@@ -5,17 +5,14 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
-import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AuthProvider>
-        <CartProvider>
-          <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <CartProvider> 
           <App />
-          </BrowserRouter>
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>

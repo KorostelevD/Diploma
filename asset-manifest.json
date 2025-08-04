@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Diploma/static/css/main.90a1f27d.css",
-    "main.js": "/Diploma/static/js/main.64c6fdd6.js",
+    "main.css": "/Diploma/static/css/main.fb75913f.css",
+    "main.js": "/Diploma/static/js/main.9d79d001.js",
     "static/media/impact-strategy-cover.jpg": "/Diploma/static/media/impact-strategy-cover.e18619d6074ac3f19e60.jpg",
     "static/media/Adversiment-Billboard-mockup-vol4.png": "/Diploma/static/media/Adversiment-Billboard-mockup-vol4.060bc5d844669f1c212f.png",
     "static/media/slide2.jpg": "/Diploma/static/media/slide2.e83b2fd5d6cc5761a52c.jpg",
@@ -27,11 +27,11 @@
     "static/media/Download_on_the_App_Store_Badge.svg": "/Diploma/static/media/Download_on_the_App_Store_Badge.e45ea3521be08482dc5150eb6b218503.svg",
     "static/media/Google_Play_Store_badge_EN.svg": "/Diploma/static/media/Google_Play_Store_badge_EN.b875ec90c7b67a386c6cab66239c6c0e.svg",
     "index.html": "/Diploma/index.html",
-    "main.90a1f27d.css.map": "/Diploma/static/css/main.90a1f27d.css.map",
-    "main.64c6fdd6.js.map": "/Diploma/static/js/main.64c6fdd6.js.map"
+    "main.fb75913f.css.map": "/Diploma/static/css/main.fb75913f.css.map",
+    "main.9d79d001.js.map": "/Diploma/static/js/main.9d79d001.js.map"
   },
   "entrypoints": [
-    "static/css/main.90a1f27d.css",
-    "static/js/main.64c6fdd6.js"
+    "static/css/main.fb75913f.css",
+    "static/js/main.9d79d001.js"
   ]
 }

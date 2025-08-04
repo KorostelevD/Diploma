@@ -195,6 +195,12 @@
   .profile__field--action .profile__field-label {
     font-size: 15px;
   }
+  
+  .profile__message {
+    margin: 15px 15px;
+    padding: 14px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -238,5 +244,11 @@
   .profile__arrow-icon {
     width: 14px;
     height: 14px;
+  }
+  
+  .profile__message {
+    margin: 12px 10px;
+    padding: 12px;
+    font-size: 12px;
   }
 }

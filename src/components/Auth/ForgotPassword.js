@@ -109,8 +109,8 @@ export const ForgotPassword = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
-            <label htmlFor="email" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="email" className="auth-form-label">
               Електронна пошта
             </label>
             <input
@@ -119,7 +119,7 @@ export const ForgotPassword = () => {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="form-input"
+              className="auth-form-input"
               placeholder="Введіть вашу електронну пошту"
               required
             />

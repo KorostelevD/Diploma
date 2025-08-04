@@ -61,8 +61,8 @@ export const Login = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
-            <label htmlFor="email" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="email" className="auth-form-label">
               Електронна пошта
             </label>
             <input
@@ -71,14 +71,14 @@ export const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="form-input"
+              className="auth-form-input"
               placeholder="Введіть вашу електронну пошту"
               required
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="password" className="auth-form-label">
               Пароль
             </label>
             <div className="password-input-container">
@@ -88,7 +88,7 @@ export const Login = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className="form-input"
+                className="auth-form-input"
                 placeholder="Введіть ваш пароль"
                 required
               />

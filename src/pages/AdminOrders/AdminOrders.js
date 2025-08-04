@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { getAllOrders } from '../../services/orders-service';
+import { getAllOrders, updateOrderStatus } from '../../services/orders-service';
 import './AdminOrders.css';
 import customBurgerImage from "../../assets/images/custom-burger.png";
 
@@ -87,6 +87,24 @@ export const AdminOrders = () => {
     return burger.ingredients.reduce((total, ingredient) => total + ingredient.price, 0);
   };
 
+  const handleOrderCompletion = async (orderId, currentStatus) => {
+    try {
+      const newStatus = !currentStatus;
+      await updateOrderStatus(orderId, newStatus);
+      
+      setOrders(prevOrders => 
+        prevOrders.map(order => 
+          order.id === orderId 
+            ? { ...order, isCompleted: newStatus, completedAt: newStatus ? new Date() : null }
+            : order
+        )
+      );
+    } catch (error) {
+      console.error('Error updating order status:', error);
+      setError('Помилка оновлення статусу замовлення');
+    }
+  };
+
   if (!isAuthenticated) {
     return (
       <div className="admin-orders">
@@ -158,7 +176,7 @@ export const AdminOrders = () => {
         
         <div className="admin-orders__list">
           {orders.map((order) => (
-            <div key={order.id} className="admin-orders__item">
+            <div key={order.id} className={`admin-orders__item ${order.isCompleted ? 'admin-orders__item--completed' : ''}`}>
               <div className="admin-orders__header" onClick={() => toggleOrder(order.id)}>
                 <div className="admin-orders__info">
                   <h3 className="admin-orders__order-label">
@@ -170,6 +188,25 @@ export const AdminOrders = () => {
                     <p><strong>Телефон:</strong> {order.phone}</p>
                     <p><strong>Доставка:</strong> {getDeliveryMethodLabel(order.deliveryType)}</p>
                     <p><strong>Оплата:</strong> {getPaymentMethodLabel(order.paymentMethod)}</p>
+                  </div>
+                  
+                  <div className="admin-orders__completion" onClick={(e) => e.stopPropagation()}>
+                    <label className="admin-orders__completion-label">
+                      <input
+                        type="checkbox"
+                        className="admin-orders__completion-checkbox"
+                        checked={order.isCompleted || false}
+                        onChange={() => handleOrderCompletion(order.id, order.isCompleted || false)}
+                      />
+                      <span className="admin-orders__completion-text">
+                        {order.isCompleted ? 'Виконано' : 'Позначити як виконане'}
+                      </span>
+                    </label>
+                    {order.isCompleted && order.completedAt && (
+                      <p className="admin-orders__completion-date">
+                        Виконано: {formatDate(order.completedAt)}
+                      </p>
+                    )}
                   </div>
                 </div>
                 

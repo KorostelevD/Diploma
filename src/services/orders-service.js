@@ -1,4 +1,4 @@
-import { collection, addDoc, query, where, getDocs, orderBy, doc as firestoreDoc, getDoc } from "firebase/firestore";
+import { collection, addDoc, query, where, getDocs, orderBy, doc as firestoreDoc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 export const createOrder = async (orderData) => {
@@ -113,6 +113,20 @@ export const getAllOrders = async () => {
         return orders;
     } catch (error) {
         console.error("Error fetching all orders:", error);
+        throw error;
+    }
+}
+
+export const updateOrderStatus = async (orderId, isCompleted) => {
+    try {
+        const orderRef = firestoreDoc(db, "orders", orderId);
+        await updateDoc(orderRef, {
+            isCompleted: isCompleted,
+            completedAt: isCompleted ? new Date() : null
+        });
+        return true;
+    } catch (error) {
+        console.error("Error updating order status:", error);
         throw error;
     }
 }

@@ -192,8 +192,8 @@ export const DynamicAuth = () => {
           </div>
 
           <form onSubmit={handleEmailSubmit} className="auth-form">
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="email" className="auth-form-label">
                 Електронна пошта
               </label>
               <input
@@ -202,7 +202,7 @@ export const DynamicAuth = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`form-input ${formErrors.email ? 'error' : ''}`}
+                className={`auth-form-input ${formErrors.email ? 'error' : ''}`}
                 placeholder="Введіть вашу електронну пошту"
                 required
               />
@@ -238,8 +238,8 @@ export const DynamicAuth = () => {
           </div>
 
           <form onSubmit={handleLoginSubmit} className="auth-form">
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="password" className="auth-form-label">
                 Пароль
               </label>
               <div className="password-input-container">
@@ -249,7 +249,7 @@ export const DynamicAuth = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.password ? 'error' : ''}`}
+                  className={`auth-form-input ${formErrors.password ? 'error' : ''}`}
                   placeholder="Введіть ваш пароль"
                   required
                 />
@@ -322,8 +322,8 @@ export const DynamicAuth = () => {
           </div>
 
           <form onSubmit={handleRegistrationSubmit} className="auth-form">
-            <div className="form-group">
-              <label htmlFor="displayName" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="displayName" className="auth-form-label">
                 Ім'я
               </label>
               <input
@@ -332,7 +332,7 @@ export const DynamicAuth = () => {
                 name="displayName"
                 value={formData.displayName}
                 onChange={handleInputChange}
-                className={`form-input ${formErrors.displayName ? 'error' : ''}`}
+                className={`auth-form-input ${formErrors.displayName ? 'error' : ''}`}
                 placeholder="Введіть ваше ім'я"
                 required
               />
@@ -341,8 +341,8 @@ export const DynamicAuth = () => {
               )}
             </div>
 
-            <div className="form-group">
-              <label htmlFor="phone" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="phone" className="auth-form-label">
                 Телефон
               </label>
               <input
@@ -351,7 +351,7 @@ export const DynamicAuth = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className={`form-input ${formErrors.phone ? 'error' : ''}`}
+                className={`auth-form-input ${formErrors.phone ? 'error' : ''}`}
                 placeholder="+380 XX XXX XX XX"
                 required
               />
@@ -360,8 +360,8 @@ export const DynamicAuth = () => {
               )}
             </div>
 
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="password" className="auth-form-label">
                 Пароль
               </label>
               <div className="password-input-container">
@@ -371,7 +371,7 @@ export const DynamicAuth = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.password ? 'error' : ''}`}
+                  className={`auth-form-input ${formErrors.password ? 'error' : ''}`}
                   placeholder="Створіть пароль"
                   required
                 />
@@ -389,8 +389,8 @@ export const DynamicAuth = () => {
               )}
             </div>
 
-            <div className="form-group">
-              <label htmlFor="confirmPassword" className="form-label">
+            <div className="auth-form-group">
+              <label htmlFor="confirmPassword" className="auth-form-label">
                 Підтвердження пароля
               </label>
               <div className="password-input-container">
@@ -400,7 +400,7 @@ export const DynamicAuth = () => {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  className={`form-input ${formErrors.confirmPassword ? 'error' : ''}`}
+                  className={`auth-form-input ${formErrors.confirmPassword ? 'error' : ''}`}
                   placeholder="Підтвердіть пароль"
                   required
                 />

@@ -100,8 +100,8 @@ export const SignUp = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
-            <label htmlFor="displayName" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="displayName" className="auth-form-label">
               Ім'я
             </label>
             <input
@@ -110,7 +110,7 @@ export const SignUp = () => {
               name="displayName"
               value={formData.displayName}
               onChange={handleInputChange}
-              className={`form-input ${formErrors.displayName ? 'error' : ''}`}
+              className={`auth-form-input ${formErrors.displayName ? 'error' : ''}`}
               placeholder="Введіть ваше ім'я"
               required
             />
@@ -119,8 +119,8 @@ export const SignUp = () => {
             )}
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="email" className="auth-form-label">
               Електронна пошта
             </label>
             <input
@@ -129,7 +129,7 @@ export const SignUp = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`form-input ${formErrors.email ? 'error' : ''}`}
+              className={`auth-form-input ${formErrors.email ? 'error' : ''}`}
               placeholder="Введіть вашу електронну пошту"
               required
             />
@@ -138,8 +138,8 @@ export const SignUp = () => {
             )}
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="password" className="auth-form-label">
               Пароль
             </label>
             <div className="password-input-container">
@@ -149,7 +149,7 @@ export const SignUp = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className={`form-input ${formErrors.password ? 'error' : ''}`}
+                className={`auth-form-input ${formErrors.password ? 'error' : ''}`}
                 placeholder="Створіть пароль"
                 required
               />
@@ -167,8 +167,8 @@ export const SignUp = () => {
             )}
           </div>
 
-          <div className="form-group">
-            <label htmlFor="confirmPassword" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="confirmPassword" className="auth-form-label">
               Підтвердження пароля
             </label>
             <div className="password-input-container">
@@ -178,7 +178,7 @@ export const SignUp = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
-                className={`form-input ${formErrors.confirmPassword ? 'error' : ''}`}
+                className={`auth-form-input ${formErrors.confirmPassword ? 'error' : ''}`}
                 placeholder="Підтвердіть пароль"
                 required
               />

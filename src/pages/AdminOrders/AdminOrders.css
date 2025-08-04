@@ -343,4 +343,71 @@
   .admin-orders__total-line {
     font-size: 1.1rem;
   }
+}
+
+/* Completion functionality styles */
+.admin-orders__completion {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.admin-orders__completion-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+}
+
+.admin-orders__completion-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #28a745;
+  cursor: pointer;
+}
+
+.admin-orders__completion-text {
+  color: #333;
+  font-weight: 500;
+  user-select: none;
+}
+
+.admin-orders__completion-date {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: #28a745;
+  font-style: italic;
+}
+
+/* Completed order styling */
+.admin-orders__item--completed {
+  border-left: 4px solid #28a745;
+}
+
+.admin-orders__item--completed .admin-orders__header {
+  background-color: #f8fff9;
+}
+
+.admin-orders__item--completed .admin-orders__order-label::after {
+  content: " ✓";
+  color: #28a745;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .admin-orders__completion {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+  
+  .admin-orders__completion-label {
+    font-size: 13px;
+  }
+  
+  .admin-orders__completion-checkbox {
+    width: 16px;
+    height: 16px;
+  }
 } 

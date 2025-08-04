@@ -4,13 +4,25 @@ import { useAuth } from "../../context/AuthContext";
 import "./Profile.css";
 
 export const Profile = () => {
-  const { user, logout, loading } = useAuth();
+  const { user, logout, loading, forgotPassword } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     const result = await logout();
     if (result.success) {
       navigate("/");
+    }
+  };
+
+  const handlePasswordReset = async () => {
+    if (!user?.email) {
+      return;
+    }
+
+    const result = await forgotPassword(user.email);
+
+    if (result.success) {
+      alert("Лист для скидання пароля надіслано на вашу електронну пошту");
     }
   };
 
@@ -199,7 +211,7 @@ export const Profile = () => {
                 </div>
                 <div className="profile__field-content">
                   <Link to="/admin-orders" className="profile__field-label">
-                    Історія замовлень адміністратора
+                    Усі замовлення
                   </Link>
                 </div>
               </div>
@@ -241,7 +253,7 @@ export const Profile = () => {
               </div>
             )}
 
-            <div className="profile__field profile__field--action">
+            <div className="profile__field profile__field--action" onClick={handlePasswordReset}>
               <div className="profile__field-icon">
                 <svg
                   width="51"
@@ -261,72 +273,6 @@ export const Profile = () => {
               </div>
               <div className="profile__field-content">
                 <div className="profile__field-label">Змінити пароль</div>
-              </div>
-              <div className="profile__field-arrow">
-                <svg
-                  className="profile__arrow-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <polyline points="9,18 15,12 9,6"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div className="profile__field profile__field--action">
-              <div className="profile__field-icon">
-                <svg
-                  width="53"
-                  height="37"
-                  viewBox="0 0 53 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 11.8571H50M11.3556 34H41.6444C44.5691 34 46.0316 34 47.1487 33.5173C48.1312 33.0928 48.9302 32.4152 49.4308 31.582C50 30.6347 50 29.3945 50 26.9143V10.0857C50 7.60549 50 6.36536 49.4308 5.41804C48.9302 4.58474 48.1312 3.90726 47.1487 3.48269C46.0316 3 44.5691 3 41.6444 3H11.3556C8.43085 3 6.96847 3 5.85139 3.48269C4.86875 3.90726 4.06985 4.58474 3.5692 5.41804C3 6.36536 3 7.60547 3 10.0857V26.9143C3 29.3945 3 30.6347 3.5692 31.582C4.06985 32.4152 4.86875 33.0928 5.85139 33.5173C6.96847 34 8.43082 34 11.3556 34Z"
-                    stroke="black"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div className="profile__field-content">
-                <div className="profile__field-label">Способи оплати</div>
-              </div>
-              <div className="profile__field-arrow">
-                <svg
-                  className="profile__arrow-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <polyline points="9,18 15,12 9,6"></polyline>
-                </svg>
-              </div>
-            </div>
-
-            <div className="profile__field profile__field--action">
-              <div className="profile__field-icon">
-                <svg
-                  width="46"
-                  height="52"
-                  viewBox="0 0 46 52"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.255 48.3983C21.8085 48.7132 22.0853 48.8707 22.4758 48.9524C22.779 49.0158 23.221 49.0158 23.5242 48.9524C23.9147 48.8707 24.1915 48.7132 24.745 48.3983C29.615 45.6266 43 36.92 43 24.9494V11.7797C43 10.4191 43 9.7387 42.7315 9.22015C42.4935 8.76044 42.1217 8.39349 41.6532 8.15588C41.125 7.88785 40.4157 7.87968 38.997 7.86332C31.568 7.77762 27.284 7.17918 23 3C18.716 7.17918 14.432 7.77762 7.003 7.86332C5.58433 7.87968 4.87498 7.88785 4.34663 8.15588C3.87823 8.39349 3.50647 8.76044 3.26847 9.22015C3 9.7387 3 10.4191 3 11.7797V24.9494C3 36.92 16.3849 45.6266 21.255 48.3983Z"
-                    stroke="black"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <div className="profile__field-content">
-                <div className="profile__field-label">Конфіденційність</div>
               </div>
               <div className="profile__field-arrow">
                 <svg

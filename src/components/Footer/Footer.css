@@ -29,6 +29,7 @@
 }
 
 .footer__list-item {
+  color: black;
   margin-bottom: 8px;
   cursor: pointer;
   font-size: 20px;

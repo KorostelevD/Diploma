@@ -203,10 +203,9 @@
 }
 
 .office-work__bottom-section {
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  padding: 0;
-  margin-top: 60px;
+    border-radius: 12px;
+    margin-top: 60px;
+    padding: 0;
 }
 
 .office-work__team-section {

@@ -94,13 +94,12 @@
 }
 
 .hygiene-quality__final {
-  background-color: #f8f8f8;
-  padding: 40px;
-  border-radius: 8px;
-  flex-direction: column;
-  display: flex;
-  gap: 40px;
-  align-items: center;
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
 }
 
 .hygiene-quality__final-image {

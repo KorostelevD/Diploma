@@ -33,8 +33,8 @@
 }
 
 .checkbox-group__input:checked {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #126231;
+  border-color: #126231;
 }
 
 .checkbox-group__input:checked::after {

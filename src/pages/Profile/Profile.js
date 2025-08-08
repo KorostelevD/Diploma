@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./Profile.css";
@@ -141,7 +141,7 @@ export const Profile = () => {
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M1.79167 0L0 1.66667V28.3333L1.79167 30H41.2083L43 28.3333V1.66667L41.2083 0H1.79167ZM3.58333 5.43444V26.6667H39.4167V5.43389L21.4998 20.5858L3.58333 5.43444ZM36.5737 3.33333H6.42578L21.4998 16.0809L36.5737 3.33333Z"
-                    fill="#080341"
+                    fill="#000000"
                   />
                 </svg>
               </div>
@@ -180,77 +180,41 @@ export const Profile = () => {
             </div>
 
             {user?.role === "admin" ? (
-              <div className="profile__field">
-                <div className="profile__field-icon">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 6h15l-1.5 9h-13z"
-                      stroke="#080341"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="9" cy="20" r="1.5" fill="#080341" />
-                    <circle cx="18" cy="20" r="1.5" fill="#080341" />
-                    <circle
-                      cx="15"
-                      cy="9"
-                      r="3"
-                      fill="white"
-                      stroke="#080341"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M14 9.5l1 1 2-2"
-                      stroke="#080341"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+              <Link to="/admin-orders" className="profile__field-label">
+                <div className="profile__field">
+                  <div className="profile__field-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 3a7 7 0 0 1 8 6" stroke="#000000" stroke-width="4" stroke-linecap="round"></path>
+                    <path d="M10 10h35l-3 20h-31Z" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle cx="14" cy="39" r="3" fill="#000000" stroke="#000000" stroke-width="3"></circle>
+                    <circle cx="34" cy="39" r="3" fill="#000000" stroke="#000000" stroke-width="3"></circle>
+                    <circle cx="27" cy="17" r="10" fill="white" stroke="#000000" stroke-width="4"></circle>
+                    <path d="M23 17l4 4 6-6" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div className="profile__field-content">
+                      Усі замовлення
+                  </div>
                 </div>
-                <div className="profile__field-content">
-                  <Link to="/admin-orders" className="profile__field-label">
-                    Усі замовлення
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ) : (
-              <div className="profile__field">
-                <div className="profile__field-icon">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 6h15l-1.5 9h-13z"
-                      stroke="#080341"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="9" cy="20" r="1.5" fill="#080341" />
-                    <circle cx="18" cy="20" r="1.5" fill="#080341" />
-                    <circle
-                      cx="15"
-                      cy="9"
-                      r="3"
-                      fill="white"
-                      stroke="#080341"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M14 9.5l1 1 2-2"
-                      stroke="#080341"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+              <Link to="/user-orders" className="profile__field-label">
+                <div className="profile__field">
+                  <div className="profile__field-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 3a7 7 0 0 1 8 6" stroke="#000000" stroke-width="4" stroke-linecap="round"></path>
+                    <path d="M10 10h35l-3 20h-31Z" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle cx="14" cy="39" r="3" fill="#000000" stroke="#000000" stroke-width="3"></circle>
+                    <circle cx="34" cy="39" r="3" fill="#000000" stroke="#000000" stroke-width="3"></circle>
+                    <circle cx="27" cy="17" r="10" fill="white" stroke="#000000" stroke-width="4"></circle>
+                    <path d="M23 17l4 4 6-6" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div className="profile__field-content">
+                      Історія замовлень
+                  </div>
                 </div>
-                <div className="profile__field-content">
-                  <Link to="/user-orders" className="profile__field-label">
-                    Історія замовлень
-                  </Link>
-                </div>
-              </div>
+              </Link>
             )}
 
             <div className="profile__field profile__field--action" onClick={handlePasswordReset}>
@@ -291,18 +255,9 @@ export const Profile = () => {
               onClick={handleLogout}
             >
               <div className="profile__field-icon">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 7L15.59 8.41L21.17 14H3V16H21.17L15.59 21.59L17 23L25 15L17 7ZM5 5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H12V19H5V5Z"
-                    fill="currentColor"
-                    transform="scale(2)"
-                  />
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M17 4.5L15.59 5.91L21.17 11.5H3V13.5H21.17L15.59 18.09L17 19.5L25 12.5L17 4.5ZM5 5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H12V19H5V5Z" fill="currentColor" transform="scale(2)">
+                 </path>
                 </svg>
               </div>
               <div className="profile__field-content">

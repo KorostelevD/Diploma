@@ -119,7 +119,6 @@
 
 .proceed-order__subtotal {
   padding: 16px 0;
-  border-top: 2px solid #f0f0f0;
   text-align: right;
   font-size: 28px;
   font-weight: 600;
@@ -229,7 +228,6 @@
 
 .proceed-order__total {
   background: #f8f8f8;
-  border-radius: 8px;
   padding: 20px;
   margin-bottom: 24px;
 }

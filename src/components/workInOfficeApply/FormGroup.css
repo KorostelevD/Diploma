@@ -121,11 +121,11 @@
 .form-group__input:focus,
 .form-group__textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #DC8E28;
 }
 
 .form-group__input--highlighted {
-  border-color: #007bff !important;
+  border-color: #DC8E28 !important;
   background-color: #f8f9ff;
 }
 

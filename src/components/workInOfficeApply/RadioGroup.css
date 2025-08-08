@@ -21,7 +21,7 @@
 }
 
 .radio-group__input:checked {
-  border-color: #007bff;
+  border-color: #126231;
 }
 
 .radio-group__input:checked::after {
@@ -32,7 +32,7 @@
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: #007bff;
+  background-color: #126231;
   border-radius: 50%;
 }
 

@@ -1,7 +1,6 @@
 .user-orders {
-  min-height: calc(100vh - 160px);
-  background-color: #f8f9fa;
-  padding: 20px 0;
+    min-height: calc(100vh - 160px);
+    padding: 20px 0;
 }
 
 .user-orders__container {
@@ -26,7 +25,6 @@
   text-align: center;
   padding: 60px 20px;
   background: white;
-  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,15 +52,14 @@
 }
 
 .user-orders__item {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+    background: #fff;
+    overflow: hidden;
+    transition: box-shadow .3s ease;
+    border: 1px solid black;
 }
 
 .user-orders__item:hover {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 10px #00000026;
 }
 
 /* Order header */
@@ -77,7 +74,6 @@
 }
 
 .user-orders__header:hover {
-  background-color: #f8f9fa;
 }
 
 .user-orders__info {
@@ -161,7 +157,10 @@
 }
 
 .user-orders__product:last-child {
-  border-bottom: none;
+}
+
+.user-orders__product--custom:last-child {
+  border: 1px solid khaki;
 }
 
 .user-orders__product-image {
@@ -209,10 +208,9 @@
 }
 
 .user-orders__product--custom {
-  background-color: #fff8dc;
-  border-radius: 8px;
-  padding: 15px;
-  border: 1px solid #f0e68c;
+    background-color: #fff8dc;
+    border: 1px solid khaki;
+    padding: 15px;
 }
 
 .user-orders__custom-burger-ingredients {

@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 20px;
   font-family: 'Inter', sans-serif;
+  margin-bottom: 300px;
 }
 
 .cart__title {
@@ -15,11 +16,10 @@
 }
 
 .cart__empty {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  margin-top: 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .cart__empty-text {
